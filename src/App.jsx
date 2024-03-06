@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from 'react';
+import AsideNavbar from './components/AsideNavbar';
+import PropTypes from 'prop-types';
+import Home from './pages/Home';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [openAsideNav, SetOpenAsideNav] = useState(false);
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000); // 3 seconds
+
+    return () => clearTimeout(timer); // cleanup timer on component unmount
+  }, []);
+
+  if (loading) {
+    return <div className='preloader' id='preloader'></div>;
+  }
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className='dark'>
+      <aside>
+        <AsideNavbar
+          openAsideNav={openAsideNav}
+          SetOpenAsideNav={SetOpenAsideNav}
+        />
+      </aside>
+      <main className='main-content'>
+        <Home />
+      </main>
+    </div>
+  );
 }
+export default App;
 
-export default App
+AsideNavbar.propTypes = {
+  openAsideNav: PropTypes.bool.isRequired,
+  SetOpenAsideNav: PropTypes.func.isRequired,
+};
