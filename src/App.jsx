@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import AsideNavbar from './components/AsideNavbar';
 import PropTypes from 'prop-types';
 import Home from './pages/Home';
+import About from './pages/About';
 
 function App() {
   const [openAsideNav, SetOpenAsideNav] = useState(false);
@@ -10,9 +11,9 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000); // 3 seconds
+    }, 3000); 
 
-    return () => clearTimeout(timer); // cleanup timer on component unmount
+    return () => clearTimeout(timer); 
   }, []);
 
   if (loading) {
@@ -28,6 +29,7 @@ function App() {
       </aside>
       <main className='main-content'>
         <Home />
+        <About />
       </main>
     </div>
   );
