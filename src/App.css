@@ -124,6 +124,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  width: 100%;
 }
 
 .btn {
@@ -671,11 +672,38 @@ h3.hello span {
 
 /*experience education section */
 
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tab:hover {
+  background-color: #ddd;
+}
+
+.tab.active {
+  background-color: #bbb;
+}
+
+.content {
+  padding: 20px;
+  border: 1px solid #bbb;
+  min-height: 200px;
+  transition: opacity 0.3s ease;
+}
 .timeline-row {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  padding-right: 5px;
+  grid-template-columns: repeat(1, 1fr);
+  /*  padding-right: 5px;*/
 }
 .about .about-content .timeline .timeline-item:last-child {
   padding-bottom: 0;
@@ -761,10 +789,11 @@ p {
 }
 .about .about-content .timeline .timeline-text {
   line-height: 25px;
-  font-size: 16px;
+  font-size: 15px;
   text-align: justify;
   margin-top: 0;
   color: var(--text-black-700);
+  padding: 10px;
 }
 
 /* #########################

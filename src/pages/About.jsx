@@ -1,6 +1,7 @@
-import EducationSection from '../components/educationSection';
-import ExperienceSection from '../components/experienceSection';
-
+import AboutTabs from '../components/AboutTabs';
+import AboutPersonalInfo from '../components/AboutPersonalInfo';
+import AboutSkills from '../components/AboutSkills';
+ 
 const About = () => {
   return (
     <section className='about section' id='about'>
@@ -31,117 +32,12 @@ const About = () => {
               </div>
             </div>
             <div className='personal-info-container'>
-              <div className='personal-info'>
-                <div className='row'>
-                  <div className='info-item'>
-                    <p>
-                      Birthday : <span>08 October 2000</span>
-                    </p>
-                  </div>
-
-                  <div className='info-item'>
-                    <p>
-                      Email : <span>hezronnyamboga6@gmail.com</span>
-                    </p>
-                  </div>
-                  <div className='info-item'>
-                    <p>
-                      Degree : <span>CS</span>
-                    </p>
-                  </div>
-                  <div className='info-item'>
-                    <p>
-                      Certifications : <span>CCNA</span>
-                    </p>
-                  </div>
-                  <div className='info-item'>
-                    <p>
-                      Phone : <span>+254 7945 917 84</span>
-                    </p>
-                  </div>
-                  <div className='info-item'>
-                    <p>
-                      City : <span>Nairobi, Kenya</span>
-                    </p>
-                  </div>
-                  <div className='info-item'>
-                    <p>
-                      Freelance : <span>Available</span>
-                    </p>
-                  </div>
-                </div>
-                <div className='row'>
-                  <div className='buttons'>
-                    <a href='#contact' className='btn hire-me'>
-                      Hire Me
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className='skills'>
-                <div className='row'>
-                  <div className='skill-item'>
-                    <h5>CSS</h5>
-                    <div className='progress'>
-                      <div
-                        className='progress-in'
-                        style={{ width: '90%' }}
-                      ></div>
-                      <div className='skill-percent'>90%</div>
-                    </div>
-                  </div>
-                  <div className='skill-item'>
-                    <h5>JS</h5>
-                    <div className='progress'>
-                      <div
-                        className='progress-in'
-                        style={{ width: '86%' }}
-                      ></div>
-                      <div className='skill-percent'>86%</div>
-                    </div>
-                  </div>
-                  <div className='skill-item'>
-                    <h5>NODE JS</h5>
-                    <div className='progress'>
-                      <div
-                        className='progress-in'
-                        style={{ width: '90%' }}
-                      ></div>
-                      <div className='skill-percent'>90%</div>
-                    </div>
-                  </div>
-                  <div className='skill-item'>
-                    <h5>PHP</h5>
-                    <div className='progress'>
-                      <div
-                        className='progress-in'
-                        style={{ width: '75%' }}
-                      ></div>
-                      <div className='skill-percent'>75%</div>
-                    </div>
-                  </div>
-                  <div className='skill-item'>
-                    <h5>HTML</h5>
-                    <div className='progress'>
-                      <div
-                        className='progress-in'
-                        style={{ width: '96%' }}
-                      ></div>
-                      <div className='skill-percent'>96%</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <AboutPersonalInfo />
+              <AboutSkills />
             </div>
 
             {/* Education Section  */}
-
-            <div className='timeline-row'>
-              <EducationSection />
-
-              {/* Experience Section */}
-              <ExperienceSection />
-            </div>
+            <AboutTabs />
           </div>
         </div>
       </div>

@@ -17,10 +17,10 @@ const ExperienceSection = () => {
       title: 'Problem-Solving and Collaboration',
       body: `Throughout my career,I have encountered and
                              overcome various challenges inherent in web
-                             development projects. I thrive in collaborative
+                             development projects.I thrive in collaborative
                              environments, working closely with cross-functional
                              teams to analyze requirements, devise solutions,
-                             and deliver high-quality products. My commitment to
+                             and deliver high-quality products.My commitment to
                              writing clean, maintainable code ensures the
                              longevity and adaptability of the applications I
                              contribute to.`,
