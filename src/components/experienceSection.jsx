@@ -28,7 +28,6 @@ const ExperienceSection = () => {
   ];
   return (
     <div className='experience'>
-      <h3 className='title'>Experience</h3>
       <div className='row'>
         <div className='timeline-box'>
           <div className='timeline shadow-dark'>

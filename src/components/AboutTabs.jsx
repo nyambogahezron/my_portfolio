@@ -1,27 +1,27 @@
-import EducationSection from './components/educationSection';
-import ExperienceSection from './components/experienceSection';
+import EducationSection from './educationSection';
+import ExperienceSection from './experienceSection';
 import { useState } from 'react';
 const AboutTabs = () => {
-  const [activeTab, setActiveTab] = useState('tab1');
+  const [activeTab, setActiveTab] = useState('EducationTab');
   return (
     <div className='timeline-row'>
       <div>
         <div className='tabs'>
           <button
-            className={`tab ${activeTab === 'tab1' ? 'active' : ''}`}
-            onClick={() => setActiveTab('tab1')}
+            className={`tab ${activeTab === 'EducationTab' ? 'active' : ''}`}
+            onClick={() => setActiveTab('EducationTab')}
           >
             Education
           </button>
           <button
-            className={`tab ${activeTab === 'tab2' ? 'active' : ''}`}
-            onClick={() => setActiveTab('tab2')}
+            className={`tab ${activeTab === 'experienceTab' ? 'active' : ''}`}
+            onClick={() => setActiveTab('experienceTab')}
           >
             Experience
           </button>
         </div>
         <div className='content'>
-          {activeTab === 'tab1' ? <EducationSection /> : <ExperienceSection />}
+          {activeTab === 'EducationTab' ? <EducationSection /> : <ExperienceSection />}
         </div>
       </div>
     </div>

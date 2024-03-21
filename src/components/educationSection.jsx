@@ -27,7 +27,6 @@ const EducationSection = () => {
   ];
   return (
     <div className='education'>
-      <h3 className='title'>Education</h3>
       <div className='row'>
         <div className='timeline-box'>
           <div className='timeline shadow-dark'>

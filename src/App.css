@@ -16,7 +16,7 @@
 }
 
 body.dark {
-  --bg-black-900: #222222;
+  --bg-black-900: #333;
   --bg-d: #183153;
   --bg-black-100: #222222;
   --bg-black-50: #393939;
@@ -349,10 +349,11 @@ html {
   height: 55px;
   right: 0;
   top: 0;
-  background: aliceblue;
+  background: var(--bg-black-900);
   padding: 20px;
   z-index: 999;
   opacity: 0.8;
+  box-shadow:0 0 3px #fff;
 }
 .top-nav .wrapper {
   position: relative;
@@ -570,7 +571,9 @@ h3.hello span {
 /* #########################
 # About
 ############################# */
-
+.about{
+  margin-left: -15px;
+}
 .about .about-content {
   flex: 0 100%;
   margin-top: -20px;
@@ -680,7 +683,8 @@ h3.hello span {
 
 .tab {
   padding: 10px 20px;
-  background-color: #f0f0f0;
+  background-color: #bbb;
+  color: #fff;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -691,20 +695,15 @@ h3.hello span {
 }
 
 .tab.active {
-  background-color: #bbb;
+  background-color: var(--skin-color);
 }
 
 .content {
-  padding: 20px;
   border: 1px solid #bbb;
   min-height: 200px;
   transition: opacity 0.3s ease;
 }
-.timeline-row {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  /*  padding-right: 5px;*/
-}
+
 .about .about-content .timeline .timeline-item:last-child {
   padding-bottom: 0;
 }
@@ -730,39 +729,24 @@ h3.hello span {
 .about .about-content .education,
 .about .about-content .experience {
   width: 100%;
+  height: 100%;
+}
+
+.timeline-row  {
+  margin-left: -15px;
   margin-top: 30px;
 }
-
-.about .about-content h3.title {
-  font-size: 24px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  font-weight: 700;
-  color: var(--text-black-900);
-}
-.education .row {
-  margin-left: -50px;
-}
-
-.education .title {
-  padding-left: -15px;
-}
-.timeline-row .experience {
-  padding-left: 0px;
-}
 .about .about-content .timeline-box {
-  flex: 0 0 90%;
-  max-width: 94%;
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 
 .about .about-content .timeline {
   padding: 30px 8px;
   background-color: var(--bg-black-100);
   border: 1px solid var(--bg-black-50);
-  border-radius: 10px;
   width: 100%;
   position: relative;
-  margin-left: 30px;
 }
 .about .about-content .timeline .timeline-item {
   position: relative;
@@ -1315,12 +1299,6 @@ form {
     overflow-x: hidden;
   }
 
-  .timeline-row {
-    margin-left: -20px;
-  }
-  .timeline-row .education {
-    margin-left: 20px;
-  }
 }
 
 @media (max-width: 970px) {
@@ -1381,9 +1359,7 @@ form {
     margin-left: 5px;
     margin-right: 10px;
   }
-  .timeline-row {
-    padding-right: 10px;
-  }
+ 
   .portfolio-card {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -1397,22 +1373,6 @@ form {
   }
 }
 @media (max-width: 740px) {
-  .timeline-row {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .timeline-row .experience {
-    margin-left: -15px;
-  }
-
-  .timeline-row .education {
-    padding-right: 30px;
-  }
-  .about .about-content .timeline-box {
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding-right: 15px;
-  }
   .portfolio-card .portfolio-item-info .portfolio-item-info-text p {
     padding-bottom: 15px;
   }
@@ -1499,6 +1459,9 @@ form {
     margin-left: -30px;
     font-weight: 800;
   }
+  .about .about-content .personal-info {
+    padding: 0;
+  }
 
   .about .about-content .personal-info-container {
     display: grid;
@@ -1508,18 +1471,10 @@ form {
   }
   .about .about-content .skills {
     margin-left: 15px;
+    padding: 0;
   }
   .about .about-content .timeline .timeline-item {
     padding: 2px 5px;
-  }
-  .timeline-title {
-    font-size: 14px;
-    text-transform: capitalize;
-    font-weight: 600;
-  }
-  .experience .title {
-    position: relative;
-    left: 20px;
   }
 
   .about .about-content .timeline .circle-dot {
