@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Home from './pages/Home';
 import About from './pages/About';
 import Skills from './pages/Skills';
+import Portfolio from './pages/Portfolio';
 
 function App() {
   const [openAsideNav, SetOpenAsideNav] = useState(false);
@@ -32,6 +33,7 @@ function App() {
         <Home />
         <About />
         <Skills />
+        <Portfolio />
       </main>
     </div>
   );

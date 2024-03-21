@@ -866,6 +866,10 @@ p {
 #portfolio {
   padding: 0 0 5px 0;
 }
+#portfolio .container{
+  justify-content: start;
+  align-items: start;
+}
 .portfolio .container {
   padding-bottom: 40px;
   padding-right: 10px;
@@ -885,12 +889,11 @@ p {
 .portfolio-card {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
-  flex-basis: 0 0 33.33%;
-  width: 100%;
+  gap: 10px 20px;
+  width: fit-content;
   margin-bottom: 20px;
   padding: 10px 0;
-  margin-left: 5px;
+  margin: 5px;
 }
 .portfolio-card p {
   font-size: 15px;
@@ -956,6 +959,8 @@ p {
 }
 
 .card .action .site {
+  display: flex;
+  align-items: center;
   position: relative;
   display: flex;
   margin-right: 20px;
