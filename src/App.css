@@ -848,6 +848,16 @@ p {
   line-height: 26px;
   padding: 0 10px;
 }
+.swiper-button-next, .swiper-button-prev {
+    color: #000;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background-color: #f00;
+}
 
 /* #########################
 # Portfolio Styles

@@ -3,6 +3,7 @@ import AsideNavbar from './components/AsideNavbar';
 import PropTypes from 'prop-types';
 import Home from './pages/Home';
 import About from './pages/About';
+import Skills from './pages/Skills';
 
 function App() {
   const [openAsideNav, SetOpenAsideNav] = useState(false);
@@ -30,6 +31,7 @@ function App() {
       <main className='main-content'>
         <Home />
         <About />
+        <Skills />
       </main>
     </div>
   );
