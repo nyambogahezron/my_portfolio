@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Skills from './pages/Skills';
 import Portfolio from './pages/Portfolio';
+import Contact from './pages/Contact';
 
 function App() {
   const [openAsideNav, SetOpenAsideNav] = useState(false);
@@ -34,6 +35,7 @@ function App() {
         <About />
         <Skills />
         <Portfolio />
+        <Contact />
       </main>
     </div>
   );
