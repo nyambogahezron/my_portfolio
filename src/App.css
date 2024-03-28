@@ -784,9 +784,6 @@ p {
 # Skills Styles
 ############################# */
 
-.service {
-  padding: 0;
-}
 .service .container {
   padding-bottom: 40px;
   margin-left: 7px;
@@ -881,9 +878,14 @@ p {
   padding-bottom: 10px;
 }
 .portfolio .portfolio-heading h2 {
-  color: var(--text-black-900);
-  font-weight: 500;
-  margin-left: 30px;
+font-size: 18px;
+display: flex;
+margin: auto;
+align-items: center;
+justify-content: center;
+font-weight: 700;
+text-transform: uppercase;
+color: var(--skin-color);
 }
 
 .portfolio-card {
@@ -892,8 +894,7 @@ p {
   gap: 10px 20px;
   width: fit-content;
   margin-bottom: 20px;
-  padding: 10px 0;
-  margin: 5px;
+  margin: auto;
 }
 .portfolio-card p {
   font-size: 15px;
@@ -1062,7 +1063,6 @@ p {
   }
   50% {
     transform: scale(1.2);
-    background: green;
   }
   100% {
     transform: scale(1);
@@ -1072,7 +1072,9 @@ p {
 /* #########################
 # Contact Styles
 ############################# */
-
+.contact .container{
+  align-items: normal;
+} 
 .contact-title {
   color: var(--skin-color);
   text-align: center;
@@ -1217,8 +1219,6 @@ form {
 .contact .contact-form {
   flex: 0 0 100%;
   max-width: 100%;
-  margin-left: 10px;
-  padding-right: 5px;
 }
 .contact .contact-form .col-6 {
   flex: 0 0 50%;
@@ -1540,6 +1540,14 @@ form {
   .portfolio-card {
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
+  }
+  .service.section{
+    padding: 0;
+  }
+  .content {
+    width: 105%;
+    display: flex;
+    margin-left: -5px;
   }
 }
 
