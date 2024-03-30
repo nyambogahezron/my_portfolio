@@ -38,6 +38,11 @@ const handleSubmit = async (e) => {
         // console.log(responseData)
 
         toast.success("Message sent successfully");
+        // Reset form fields
+        setName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
     } catch (error) {
         toast.error("Error: " + error.message);
     }

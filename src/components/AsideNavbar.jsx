@@ -1,4 +1,21 @@
+import { useState } from 'react';
+
 const AsideNavbar = ({ SetOpenAsideNav, openAsideNav }) => {
+  const [activeLink, setActiveLink] = useState('home');
+
+  const links = [
+    { name: 'home',  label: 'Home' },
+    { name: 'about',  label: 'About' },
+    { name: 'services', label: 'Skills' },
+    { name: 'portfolio', label: 'Portfolio' },
+    { name: 'contact', label: 'Contact' },
+  ];
+
+  const handleClick = (link) => {
+    setActiveLink(link);
+    SetOpenAsideNav(!openAsideNav);
+  };
+
   return (
     <div className={`aside ${openAsideNav ? 'open' : ''}`}>
       <div className='logo'>
@@ -13,33 +30,16 @@ const AsideNavbar = ({ SetOpenAsideNav, openAsideNav }) => {
         <span></span>
       </div>
       <ul className='nav'>
-        <li>
-          <a href='#home' className='nav-link active'>
-            <i className='fa fa-home'></i>Home
-          </a>
-        </li>
-        <li>
-          <a href='#about' className='nav-link'>
-            <i className='fa fa-user'></i> About
-          </a>
-        </li>
-        <li>
-          <a href='#services' className='nav-link'>
-            <i className='fa fa-list'></i> Skills
-          </a>
-        </li>
-        <li>
-          <a href='#portfolio' className='nav-link'>
-            <i className='fa fa-briefcase'></i>Portfolio
-          </a>
-        </li>
-        <li>
-          <a href='#contact' className='nav-link'>
-            <i className='fa fa-comments'></i>Contact
-          </a>
-        </li>
+        {links.map((link) => (
+          <li key={link.name}>
+            <a href={`#${link.name}`} className={activeLink === link.name ? 'nav-link active' : 'nav-link'} onClick={() => handleClick(link.name)}>
+              {link.label}
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
   );
 };
+
 export default AsideNavbar;
