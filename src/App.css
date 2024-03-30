@@ -1166,15 +1166,15 @@ form {
 .alert {
   display: flex;
   position: relative;
+  margin: 15px;
+  align-items: center;
 }
 .form-info {
   position: relative;
   display: flex;
-  width: 100%;
   background-color: var(--bg-d);
   color: var(--text-color-1);
   height: 35px;
-  margin: 10px 0 10px -15px;
   font-size: 15px;
   font-weight: 500;
   border-left: 4px solid green;
@@ -1182,7 +1182,7 @@ form {
   font-family: 'Poppins', sans-serif;
   text-transform: capitalize;
   align-items: center;
-  transition: all 0.2s easy;
+  transition: all 0.2s ease;
   opacity: 0;
   visibility: hidden;
 }
