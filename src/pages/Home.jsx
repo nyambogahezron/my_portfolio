@@ -1,10 +1,10 @@
-import LanguagesList from '../components/languagesList';
-import PropTypes from 'prop-types';
-import HeroImg from '../assets/images/hero.png';
-import TopNavbar from '../components/TopNavbar';
+import LanguagesList from "../components/languagesList";
+import PropTypes from "prop-types";
+import HeroImg from "../assets/images/hero.png";
+import TopNavbar from "../components/TopNavbar";
 const Home = ({ SetOpenAsideNav, openAsideNav }) => {
   return (
-    <section className='home section' id='home'>
+    <section className='home' id='home'>
       <TopNavbar
         SetOpenAsideNav={SetOpenAsideNav}
         openAsideNav={openAsideNav}
