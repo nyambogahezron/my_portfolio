@@ -33,8 +33,8 @@ const Home = ({ SetOpenAsideNav, openAsideNav }) => {
             </p>
             <LanguagesList />
             <div className='cv-btn'>
-              <a href='./assets/cv\my_cv.pdf' download>
-                <button className='btn'>Download CV</button>
+              <a href='/public/Hezron Nyamboga -resume.pdf' download>
+                <button className='btn'>Download Resume</button>
               </a>
             </div>
           </div>
