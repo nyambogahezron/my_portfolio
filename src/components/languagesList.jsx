@@ -66,7 +66,7 @@ const LanguagesList = () => {
             <span
               key={id}
               title={name}
-              className='shadow-dark'
+              className='shadow-dark language-icon'
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {icon}
