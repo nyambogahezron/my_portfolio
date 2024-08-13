@@ -1,6 +1,6 @@
-import LanguagesList from '../components/languagesList';
-import HeroImg from '../assets/images/hero.png';
-import TopNavbar from '../components/TopNavbar';
+import LanguagesList from '../../components/languagesList';
+import HeroImg from '../../assets/images/hero.png';
+import TopNavbar from '../../components/TopNavbar';
 import Image from 'next/image';
 import React from 'react';
 

@@ -1,6 +1,6 @@
-import AboutTabs from '../components/AboutTabs';
-import AboutPersonalInfo from '../components/AboutPersonalInfo';
-import AboutSkills from '../components/AboutSkills';
+import AboutTabs from '../../components/AboutTabs';
+import AboutPersonalInfo from '../../components/AboutPersonalInfo';
+import AboutSkills from '../../components/AboutSkills';
  
 const About = () => {
   return (
