@@ -1,0 +1,260 @@
+.about {
+  margin-left: -15px;
+}
+.about .aboutContent {
+  flex: 0 100%;
+  margin-top: -20px;
+  max-width: 100%;
+  margin-left: 10px;
+}
+.about .aboutContent .aboutText {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-left: -30px;
+}
+.about .aboutContent .aboutText p {
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--text-black-700);
+}
+.about .aboutContent .personalInfoContainer {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: -30px;
+}
+.about .aboutContent .personalInfo {
+  margin-left: 15px;
+  padding: 20px;
+  margin-top: 40px;
+}
+.about .aboutContent .personalInfo .infoItem {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.about .aboutContent .personalInfo .infoItem p {
+  font-weight: 600;
+  padding: 10px 0;
+  font-size: 16px;
+  color: var(--text-black-900);
+  border-bottom: 1px solid var(--skin-color);
+}
+.about .aboutContent .personalInfo .infoItem p span {
+  font-weight: 400;
+  color: var(--text-black-700);
+  margin-left: 4px;
+  display: inline-block;
+}
+.about .aboutContent .skills {
+  padding: 20px;
+  width: 100%;
+  margin-left: 15px;
+  margin-top: 40px;
+}
+.about .aboutContent .personalInfo .buttons {
+  margin-top: 30px;
+  margin-left: -70px;
+}
+.about .aboutContent .personalInfo .buttons .btn {
+  margin-top: 10px;
+}
+.about .aboutContent .skills .skillItem {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 25px;
+  line-height: 40px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-black-900);
+  text-transform: capitalize;
+}
+.about .aboutContent .skills .skillItem .progress {
+  background-color: var(--bg-black-50);
+  height: 7px;
+  border-radius: 4px;
+  width: 100%;
+  position: relative;
+}
+.about .aboutContent .skills .skillItem .progress .progressIn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 4px;
+  background-color: var(--skin-color);
+}
+.about .aboutContent .skills .skillItem .skillPercent {
+  position: absolute;
+  right: 0;
+  color: var(--text-black-900);
+  top: -40px;
+  font-weight: 400;
+  line-height: 40px;
+}
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.tab {
+  padding: 10px 20px;
+  background-color: #bbb;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.tab:hover {
+  background-color: #ddd;
+}
+.tab.active {
+  background-color: var(--skin-color);
+}
+.content {
+  border: 1px solid #bbb;
+  min-height: 200px;
+  transition: opacity 0.3s ease;
+}
+.about .aboutContent .timeline .timelineItem:last-child {
+  padding-bottom: 0;
+}
+.about .aboutContent .timeline .timelineItem:before {
+  content: '';
+  width: 1px;
+  position: absolute;
+  height: 100%;
+  left: 7px;
+  top: 0;
+  background-color: var(--skin-color);
+}
+.about .aboutContent .timeline .circleDot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: var(--skin-color);
+}
+.about .aboutContent .education,
+.about .aboutContent .experience {
+  width: 100%;
+  height: 100%;
+}
+.timeline-row {
+  margin-left: -15px;
+  margin-top: 30px;
+}
+.about .aboutContent .timelineBox {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.about .aboutContent .timeline {
+  padding: 30px 8px;
+  background-color: var(--bg-black-100);
+  border: 1px solid var(--bg-black-50);
+  width: 100%;
+  position: relative;
+}
+.about .aboutContent .timeline .timelineItem {
+  position: relative;
+  padding: 0 5px;
+}
+.about .aboutContent .timeline .timelineItem h4 {
+  padding-left: 13px;
+}
+.about .aboutContent .timeline .timelineDate {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--skin-color);
+  text-transform: capitalize;
+}
+.about .aboutContent .timeline .timelineDate .fa {
+  margin-right: 5px;
+}
+.timeline-title {
+  color: blue;
+}
+.about .aboutContent .timeline .timelineText {
+  line-height: 25px;
+  font-size: 15px;
+  text-align: justify;
+  margin-top: 0;
+  color: var(--text-black-700);
+  padding: 10px;
+}
+
+@media (max-width: 893px) {
+  .about .aboutContent .skills {
+    width: 100%;
+    margin-left: 0;
+  }
+  .about .aboutContent .skills .skillItem h5 {
+    margin-left: 20px;
+  }
+  .about .aboutContent .skills .skillItem .skillPercent {
+    margin-right: 60px;
+  }
+  .about .aboutContent .skills .skillItem .progress {
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 629px) {
+  .about .aboutContent .aboutText p,
+  .about .aboutContent .timeline .timelineDate {
+    font-size: 15px;
+  }
+  .about .aboutContent .personalInfo .infoItem p {
+    font-size: 12px;
+  }
+  .skillItem h5,
+  .skillPercent {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  .about .aboutContent .skills .skillItem .progress {
+    height: 4px;
+  }
+  .about .aboutContent h3.title {
+    font-size: 22px;
+    margin-left: -30px;
+    font-weight: 800;
+  }
+  .about .aboutContent .personalInfo {
+    padding: 0;
+  }
+  .about .aboutContent .personalInfo-container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: -30px;
+  }
+  .about .aboutContent .skills {
+    margin-left: 15px;
+    padding: 0;
+  }
+  .about .aboutContent .timeline .timelineItem {
+    padding: 2px 5px;
+  }
+  .about .aboutContent .timeline .circle-dot {
+    position: absolute;
+    left: 3px;
+    height: 10px;
+    width: 10px;
+  }
+  .about .aboutContent .timeline .timelineText {
+    line-height: 26px;
+    font-size: 13px;
+    text-align: start;
+    justify-content: start;
+  }
+
+  .skillItem h5,
+  .skillPercent {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+}

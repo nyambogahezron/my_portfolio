@@ -11,6 +11,16 @@ const HomePage: React.FC = () => {
   const [openAsideNav, SetOpenAsideNav] = useState(false);
   const [loading, setLoading] = useState(true);
 
+  const dev = true;
+
+  if (dev) {
+    return (
+      <div>
+        <h1>Under Maintenance</h1>
+      </div>
+    );
+  }
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);

@@ -1,8 +1,9 @@
+import Image from 'next/image';
+import React from 'react';
 import LanguagesList from '../../components/languagesList';
 import HeroImg from '../../assets/images/hero.png';
 import TopNavbar from '../../components/TopNavbar';
-import Image from 'next/image';
-import React from 'react';
+import styles from './index.module.css'
 
 interface HomeProps {
   SetOpenAsideNav: (open: boolean) => void;
@@ -11,22 +12,22 @@ interface HomeProps {
 
 const Home: React.FC<HomeProps> = ({ SetOpenAsideNav, openAsideNav }) => {
   return (
-    <section className='home' id='home'>
+    <section className={styles.home} id='home'>
       <TopNavbar
         SetOpenAsideNav={SetOpenAsideNav}
         openAsideNav={openAsideNav}
       />
-      <div className='container'>
-        <div className='row'>
-          <div className='home-info'>
-            <h3 className='hello'>
-              Hello, My Name Is<span className='name'> Nyamboga Hezron </span>
+      <div className={styles.container}>
+        <div className={styles.row}>
+          <div className={styles.homeInfo}>
+            <h3 className={styles.hello}>
+              Hello, My Name Is<span className={styles.name}> Nyamboga Hezron </span>
             </h3>
-            <h3 className='my-profession'>
+            <h3 className={styles.myProfession}>
               {`I'm a`}
               <span>Full Stack Software Developer </span>
             </h3>
-            <p className='home-desp'>
+            <p className={styles.homeDesp}>
               I possess advanced proficiency in JavaScript, a versatile and
               powerful programming language. With a solid foundation in
               JavaScript, I have successfully built my skills around Node JS and
@@ -39,13 +40,13 @@ const Home: React.FC<HomeProps> = ({ SetOpenAsideNav, openAsideNav }) => {
               thrives in environments that foster creativity.
             </p>
             <LanguagesList />
-            <div className='cv-btn'>
+            <div className={styles.cvBtn}>
               <a href='/public/Hezron Nyamboga -resume.pdf' download>
-                <button className='btn'>Download Resume</button>
+                <button className={styles.btn}>Download Resume</button>
               </a>
             </div>
           </div>
-          <div className='home-img'>
+          <div className={styles.homeImg}>
             <Image src={HeroImg} alt='my-photo' />
           </div>
         </div>

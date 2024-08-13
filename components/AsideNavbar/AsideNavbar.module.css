@@ -1,0 +1,170 @@
+.aside {
+  width: 270px;
+  background: var(--bg-black-100);
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 30px;
+  height: 100%;
+  border-right: 1px solid var(--bg-black-50);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+.aside .logo {
+  position: absolute;
+  top: 50px;
+  font-size: 30px;
+  text-transform: capitalize;
+}
+.aside .logo a {
+  color: var(--text-black-700);
+  font-weight: 700;
+  padding: 15px 20px;
+  font-size: 30px;
+  letter-spacing: 5px;
+  position: relative;
+}
+.aside .logo a span {
+  font-family: 'Clicker Script', cursive;
+  font-size: 40px;
+}
+.aside .logo a::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-bottom: 5px solid var(--skin-color);
+  border-left: 5px solid var(--skin-color);
+  bottom: 0;
+  left: 0;
+}
+.aside .logo a::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-top: 5px solid var(--skin-color);
+  border-right: 5px solid var(--skin-color);
+  top: 0;
+  right: 0;
+}
+.nav-link {
+  background-color: ffffff;
+}
+.nav-link.active {
+  background-color: var(--skin-color);
+  color: var(--bg-black-900);
+  border-radius: 2px;
+  border: none;
+}
+.nav-link.active .fa {
+  color: #00f;
+}
+.nav-link .fa {
+  color: var(--skin-color);
+}
+.aside .nav {
+  margin-top: 50px;
+}
+.aside .nav li {
+  margin-bottom: 20px;
+  display: block;
+}
+.aside .nav li a {
+  font-size: 16px;
+  font-weight: 600px;
+  display: block;
+  border-bottom: 2px solid var(--bg-black-50);
+  color: var(--text-color-1);
+  padding: 5px 15px;
+}
+.aside .nav li a i {
+  margin-right: 15px;
+}
+.navbar .toggle_btn {
+  display: block;
+  margin: 25px;
+  position: fixed;
+  z-index: 999;
+}
+.aside .nav-toggler {
+  left: 20px;
+  display: flex;
+}
+.aside.open {
+  left: 0;
+}
+.drop .dropdown_menu {
+  display: none;
+}
+.dropdown_menu {
+  left: 2rem;
+  width: unset;
+}
+.aside .nav-toggler {
+  height: 40px;
+  width: 45px;
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  left: 0;
+  border-radius: 5px;
+  display: block;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.aside .nav-toggler:hover {
+  background: var(--text-black-900);
+}
+.aside .nav-toggler span {
+  height: 2px;
+  width: 18px;
+  background: var(--skin-color);
+  display: inline-block;
+  position: relative;
+}
+.aside.open .nav-toggler {
+  left: 220px;
+  top: 10px;
+}
+.aside {
+  left: -270px;
+  z-index: 9999;
+}
+.aside .open {
+  left: 270px;
+}
+.aside.open .nav-toggler span {
+  background-color: transparent;
+}
+.aside.open .nav-toggler span::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+.aside .nav-toggler span::before {
+  content: '';
+  height: 2px;
+  width: 18px;
+  background: var(--skin-color);
+  position: absolute;
+  top: -6px;
+  left: 0;
+}
+.aside .nav-toggler span::after {
+  content: '';
+  height: 2px;
+  width: 18px;
+  background: var(--skin-color);
+  position: absolute;
+  top: 6px;
+  left: 0;
+}
+.aside.open .nav-toggler span::after {
+  transform: rotate(-45deg);
+  top: 0;
+}

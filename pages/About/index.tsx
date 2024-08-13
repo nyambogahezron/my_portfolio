@@ -1,10 +1,11 @@
 import AboutTabs from '../../components/AboutTabs';
 import AboutPersonalInfo from '../../components/AboutPersonalInfo';
 import AboutSkills from '../../components/AboutSkills';
- 
+import styles from './index.module.css';
+
 const About = () => {
   return (
-    <section className='about section' id='about'>
+    <section className={`${styles.about} section`} id='about'>
       <div className='container'>
         <div className='row'>
           <div className='section-title'>
@@ -12,9 +13,9 @@ const About = () => {
           </div>
         </div>
         <div className='row'>
-          <div className='about-content'>
+          <div className='aboutContent'>
             <div className='row'>
-              <div className='about-text'>
+              <div className='aboutText'>
                 <p>
                   {` I am well-versed in enhancing my ability to streamline
                   development processes and collaborate effectively with
@@ -31,7 +32,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className='personal-info-container'>
+            <div className='personalInfo-container'>
               <AboutPersonalInfo />
               <AboutSkills />
             </div>

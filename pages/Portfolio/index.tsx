@@ -66,7 +66,7 @@ const Portfolio = () => {
             <h2>My Projects</h2>
           </div>
         </div>
-        <div className="portfolio-card">
+        <div className="portfolioCard">
           {portfolioItems.map((item) => (
             <div className={`card ${flipped.includes(item.id) ? 'flipped' : ''}`} key={item.id}>
               <div className="card-front">
