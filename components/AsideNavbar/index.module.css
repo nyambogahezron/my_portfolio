@@ -13,7 +13,7 @@
   z-index: 10;
   transition: all 0.3s ease;
 }
-.aside .logo {
+.logo {
   position: absolute;
   top: 50px;
   font-size: 30px;
@@ -51,20 +51,14 @@
   top: 0;
   right: 0;
 }
-.nav-link {
+.navLink {
   background-color: ffffff;
 }
-.nav-link.active {
+.navLink.active {
   background-color: var(--skin-color);
   color: var(--bg-black-900);
   border-radius: 2px;
   border: none;
-}
-.nav-link.active .fa {
-  color: #00f;
-}
-.nav-link .fa {
-  color: var(--skin-color);
 }
 .aside .nav {
   margin-top: 50px;
@@ -90,21 +84,15 @@
   position: fixed;
   z-index: 999;
 }
-.aside .nav-toggler {
+.aside .navToggler {
   left: 20px;
   display: flex;
 }
 .aside.open {
   left: 0;
 }
-.drop .dropdown_menu {
-  display: none;
-}
-.dropdown_menu {
-  left: 2rem;
-  width: unset;
-}
-.aside .nav-toggler {
+
+.navToggler {
   height: 40px;
   width: 45px;
   cursor: pointer;
@@ -118,53 +106,54 @@
   justify-content: center;
   transition: all 0.3s ease;
 }
-.aside .nav-toggler:hover {
+.navToggler:hover {
   background: var(--text-black-900);
 }
-.aside .nav-toggler span {
+.navToggler span {
   height: 2px;
   width: 18px;
   background: var(--skin-color);
   display: inline-block;
   position: relative;
 }
-.aside.open .nav-toggler {
+.aside.open .navToggler {
   left: 220px;
   top: 10px;
 }
+
 .aside {
   left: -270px;
   z-index: 9999;
 }
-.aside .open {
-  left: 270px;
+.aside.open {
+  left: 0;
 }
-.aside.open .nav-toggler span {
+.aside.open .navToggler span {
   background-color: transparent;
 }
-.aside.open .nav-toggler span::before {
+.aside.open .navToggler span::before {
   transform: rotate(45deg);
   top: 0;
 }
-.aside .nav-toggler span::before {
+.aside .navToggler span::before {
   content: '';
   height: 2px;
   width: 18px;
-  background: var(--skin-color);
+  background: #cf3535;
   position: absolute;
   top: -6px;
   left: 0;
 }
-.aside .nav-toggler span::after {
+.aside .navToggler span::after {
   content: '';
   height: 2px;
   width: 18px;
-  background: var(--skin-color);
+  background: #cf3535;
   position: absolute;
   top: 6px;
   left: 0;
 }
-.aside.open .nav-toggler span::after {
+.aside.open .navToggler span::after {
   transform: rotate(-45deg);
   top: 0;
 }

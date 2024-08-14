@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import styles from './index.module.css';
 interface AsideNavbarProps {
   openAsideNav: boolean;
   SetOpenAsideNav: (open: boolean) => void;
@@ -9,7 +9,7 @@ const AsideNavbar: React.FC<AsideNavbarProps> = ({
   SetOpenAsideNav,
   openAsideNav,
 }) => {
-  const [activeLink, setActiveLink] = useState('home');
+  const [activeLink, setActiveLink] = useState<string>('home');
 
   const links = [
     { name: 'home', label: 'Home' },
@@ -25,25 +25,27 @@ const AsideNavbar: React.FC<AsideNavbarProps> = ({
   };
 
   return (
-    <div className={`aside ${openAsideNav ? 'open' : ''}`}>
-      <div className='logo'>
+    <div className={`${styles.aside} ${openAsideNav ? styles.open : ''}`}>
+      <div className={styles.logo}>
         <a href='#'>
           <span>H</span>ezron
         </a>
       </div>
       <div
         onClick={() => SetOpenAsideNav(!openAsideNav)}
-        className='nav-toggler'
+        className={styles.navToggler}
       >
         <span></span>
       </div>
-      <ul className='nav'>
+      <ul className={styles.nav}>
         {links.map((link) => (
           <li key={link.name}>
             <a
               href={`#${link.name}`}
               className={
-                activeLink === link.name ? 'nav-link active' : 'nav-link'
+                activeLink === link.name
+                  ? `${styles.navLink} ${styles.active}`
+                  : `${styles.navLink}`
               }
               onClick={() => handleClick(link.name)}
             >
