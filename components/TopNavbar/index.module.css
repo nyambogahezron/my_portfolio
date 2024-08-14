@@ -1,0 +1,26 @@
+.topNav {
+  position: fixed;
+  width: 100%;
+  height: 55px;
+  right: 0;
+  top: 0;
+  background: var(--bg-black-900);
+  padding: 20px;
+  z-index: 999;
+  box-shadow: 0 0 3px #fff;
+}
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 10 10px;
+}
+.menuToggle svg {
+  font-size: 20px;
+}
+
+

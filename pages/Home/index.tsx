@@ -3,7 +3,7 @@ import React from 'react';
 import LanguagesList from '../../components/languagesList';
 import HeroImg from '../../assets/images/hero.png';
 import TopNavbar from '../../components/TopNavbar';
-import styles from './index.module.css'
+import styles from './index.module.css';
 
 interface HomeProps {
   SetOpenAsideNav: (open: boolean) => void;
@@ -21,7 +21,8 @@ const Home: React.FC<HomeProps> = ({ SetOpenAsideNav, openAsideNav }) => {
         <div className={styles.row}>
           <div className={styles.homeInfo}>
             <h3 className={styles.hello}>
-              Hello, My Name Is<span className={styles.name}> Nyamboga Hezron </span>
+              Hello, My Name Is
+              <span className={styles.name}> Nyamboga Hezron </span>
             </h3>
             <h3 className={styles.myProfession}>
               {`I'm a`}
