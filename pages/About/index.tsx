@@ -13,9 +13,9 @@ const About = () => {
           </div>
         </div>
         <div className='row'>
-          <div className='aboutContent'>
-            <div className='row'>
-              <div className='aboutText'>
+          <div className={styles.aboutContent}>
+            <div className={styles.wrapper}>
+              <div className={styles.aboutText}>
                 <p>
                   {` I am well-versed in enhancing my ability to streamline
                   development processes and collaborate effectively with
@@ -31,11 +31,13 @@ const About = () => {
                   expectations.`}
                 </p>
               </div>
+              <div>
+                <AboutPersonalInfo />
+              </div>
             </div>
-            <div className='personalInfo-container'>
-              <AboutPersonalInfo />
+            {/* <div className={styles.personalInfoContainer}>
               <AboutSkills />
-            </div>
+            </div> */}
 
             {/* Education Section  */}
             <AboutTabs />

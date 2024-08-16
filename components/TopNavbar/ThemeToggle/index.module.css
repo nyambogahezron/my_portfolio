@@ -51,7 +51,10 @@
 }
 .actionIcons {
   display: flex;
+  position: fixed;
+  right: 0;
   gap: 5px;
+  margin-right: 10px;
 }
 
 .sIcon {
