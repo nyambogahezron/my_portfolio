@@ -19,9 +19,9 @@ const HomePage: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  if (loading) {
-    return <div className='preloader' id='preloader'></div>;
-  }
+  // if (loading) {
+  //   return <div className='preloader' id='preloader'></div>;
+  // }
 
   return (
     <div className='dark'>

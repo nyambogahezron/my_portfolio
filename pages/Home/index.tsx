@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
-import LanguagesList from '../../components/languagesList';
+import LanguagesList from './languagesList';
 import HeroImg from '../../assets/images/hero.png';
-import TopNavbar from '../../components/TopNavbar';
+import TopNavbar from '../../components/TopNavbar/ThemeToggle';
 import styles from './index.module.css';
 
 interface HomeProps {
@@ -17,8 +17,8 @@ const Home: React.FC<HomeProps> = ({ SetOpenAsideNav, openAsideNav }) => {
         SetOpenAsideNav={SetOpenAsideNav}
         openAsideNav={openAsideNav}
       />
-      <div className={styles.container}>
-        <div className={styles.row}>
+      <div className='container'>
+        <div className='row'>
           <div className={styles.homeInfo}>
             <h3 className={styles.hello}>
               Hello, My Name Is
@@ -43,7 +43,7 @@ const Home: React.FC<HomeProps> = ({ SetOpenAsideNav, openAsideNav }) => {
             <LanguagesList />
             <div className={styles.cvBtn}>
               <a href='/public/Hezron Nyamboga -resume.pdf' download>
-                <button className={styles.btn}>Download Resume</button>
+                <button className='btn'>Download Resume</button>
               </a>
             </div>
           </div>

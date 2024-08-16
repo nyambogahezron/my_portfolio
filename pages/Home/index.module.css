@@ -5,8 +5,9 @@
   color: var(--text-black-900);
   position: relative;
   padding-top: 25px;
-  margin: 0;
+  margin: 0 auto;
   width: 100%;
+  max-width: 1400px;
 }
 .home .homeInfo {
   flex: 0 0 55%;
@@ -69,7 +70,7 @@ h3.hello span {
   padding: 0;
   height: 25px;
   border-radius: 50%;
-  color: #ec1839;
+  color: var(--skin-color);
 }
 .home .languages span:hover {
   border: 2px solid #fff;
@@ -77,21 +78,26 @@ h3.hello span {
   transform: scale(1.2);
   opacity: 100%;
 }
-@keyframes slideInFromLeft {
+
+@keyframes slideInFromTop {
   0% {
-    transform: translateX(-100%);
+    transform: translateY(-80%);
     opacity: 0;
   }
+  50% {
+    transform: translateY(10%);
+    opacity: 0.7;
+  }
   100% {
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
-.languages-list span {
-  animation: slideInFromLeft 1s ease-out;
+.languagesList span {
+  animation: slideInFromTop 1s ease-out;
 }
 @media (max-width: 600px) {
-  .language-icon {
+  .languageIcon {
     animation: none !important;
   }
 }
@@ -125,10 +131,10 @@ h3.hello span {
 }
 
 @media (max-width: 960px) {
-  .home-img {
+  .homeImg {
     display: none;
   }
-  .home .home-info {
+  .home .homeInfo {
     flex: 0 0 100%;
     align-items: start;
     max-width: 100%;
@@ -140,16 +146,16 @@ h3.hello span {
   }
 }
 @media (max-width: 940px) {
-  .home-img::before,
-  .home-img::after {
+  .homeImg::before,
+  .homeImg::after {
     display: none;
   }
 }
 @media (max-width: 894px) {
-  .home .home-img {
+  .home .homeImg {
     display: none;
   }
-  .home .home-info {
+  .home .homeInfo {
     flex: 0 0 100%;
     max-width: 100%;
   }
@@ -161,16 +167,16 @@ h3.hello span {
   .main-content {
     margin-left: 0;
   }
-  .home .home-info {
+  .home .homeInfo {
     margin-top: 30px;
   }
-  .home .home-info h3 {
+  .home .homeInfo h3 {
     font-size: 15px;
   }
-  .home .home-info span {
+  .home .homeInfo span {
     font-size: 17px;
   }
-  .home .home-info p {
+  .home .homeInfo p {
     font-size: 15px;
   }
   .home .languages span {
@@ -181,7 +187,7 @@ h3.hello span {
     height: 25px;
     width: 25px;
   }
-  .cv-btn {
+  .cvBtn {
     margin-top: -15px;
   }
 }

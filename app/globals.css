@@ -23,6 +23,7 @@ body {
   line-height: 1.5;
   font-size: 16px;
   font-display: Poppins sans-serif;
+  background: var(--bg-black-900);
 }
 * {
   margin: 0;

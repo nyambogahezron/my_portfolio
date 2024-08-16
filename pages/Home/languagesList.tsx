@@ -9,8 +9,17 @@ import {
   FaDatabase,
   FaNodeJs,
 } from 'react-icons/fa';
+
+import styles from './index.module.css';
+
+interface languagesListDataProps {
+  id: number;
+  name: string;
+  icon: JSX.Element;
+}
+
 const LanguagesList = () => {
-  const languagesListData = [
+  const languagesListData: languagesListDataProps = [
     {
       id: 1,
       name: 'HTML',
@@ -58,15 +67,14 @@ const LanguagesList = () => {
     },
   ];
   return (
-    <div className='languages'>
-      <div className='languages-list'>
+    <div className={styles.languages}>
+      <div className={styles.languagesList}>
         {languagesListData.map((item, index) => {
           const { name, icon, id } = item;
           return (
             <span
               key={id}
               title={name}
-              className='shadow-dark language-icon'
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {icon}
