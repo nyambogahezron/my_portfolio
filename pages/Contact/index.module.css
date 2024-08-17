@@ -1,5 +1,7 @@
 .contact .container {
   align-items: normal;
+  border: 1px solid red;
+
 }
 .contact-title {
   color: var(--skin-color);

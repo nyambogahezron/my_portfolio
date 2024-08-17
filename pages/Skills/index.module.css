@@ -1,15 +1,18 @@
 .service .container {
   padding-bottom: 40px;
-  margin-left: 7px;
   padding-right: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid red;
+
 }
-.service-row {
+.serviceRow {
   position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
 }
-.service-row .skills-card {
+.serviceRow .skillsCard {
   background-color: var(--bg-black-100);
   border: 1px solid var(--bg-black-50);
   border-radius: 10px;
@@ -17,10 +20,10 @@
   text-align: center;
   transition: all 0.3s ease;
 }
-.skills-card:hover {
+.skillsCard:hover {
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
-.skills-card .icon {
+.skillsCard .icon {
   display: flex;
   text-align: center;
   justify-content: center;
@@ -28,7 +31,7 @@
   color: var(--skin-color);
   transition: all 0.5s ease;
 }
-.skills-card .icon i {
+.skillsCard .icon i {
   height: 40px;
   width: 40px;
   border-radius: 50%;
@@ -37,20 +40,20 @@
   text-align: center;
   transition: all 0.3s ease;
 }
-.skills-card .icon i:hover {
+.skillsCard .icon i:hover {
   transform: scale(1.2);
 }
-.skills-card:hover .icon i {
+.skillsCard:hover .icon i {
   margin-left: -5px;
 }
-.skills-card .skill-item-title {
+.skillsCard .skillItemTitle {
   font-size: 18px;
   margin-bottom: 10px;
   color: var(--text-black-900);
   font-weight: 700;
   text-transform: capitalize;
 }
-.skills-card .skill-item-description p {
+.skillsCard .skillItemDescription p {
   font-size: 16px;
   color: var(--text-black-700);
   line-height: 26px;
@@ -58,15 +61,17 @@
 }
 
 @media (max-width: 770px) {
-  .service-row {
-    display: grid;
+  .serviceRow {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 629px) {
-
-  .service.section {
+  .service {
     padding: 0;
+    margin-left: 5px;
+  }
+  .serviceRow {
+    grid-template-columns: repeat(1, 1fr);
   }
   .content {
     width: 105%;

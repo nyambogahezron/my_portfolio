@@ -1,6 +1,8 @@
 .about {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
+  border: 1px solid red;
+  padding-bottom: 30px;
 }
 
 .about .aboutContent .aboutText p {
@@ -63,8 +65,8 @@
     margin-bottom: 20px;
   }
   .content {
-    width: 100%;
-    margin: 0 -15px;
+    width: 110%;
+    margin-left: -20px;
   }
 }
 
