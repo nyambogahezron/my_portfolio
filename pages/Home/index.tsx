@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
-import LanguagesList from './languagesList';
 import HeroImg from '../../assets/images/hero.png';
-import TopNavbar from '../../components/TopNavbar/ThemeToggle';
+import TopNavbar from '../../components/TopNavbar';
 import styles from './index.module.css';
+import LanguagesList from './languagesList';
 
 interface HomeProps {
   SetOpenAsideNav: (open: boolean) => void;

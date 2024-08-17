@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './index.module.css';
+import { links } from '@/Data';
 interface AsideNavbarProps {
   openAsideNav: boolean;
   SetOpenAsideNav: (open: boolean) => void;
@@ -10,14 +11,6 @@ const AsideNavbar: React.FC<AsideNavbarProps> = ({
   openAsideNav,
 }) => {
   const [activeLink, setActiveLink] = useState<string>('home');
-
-  const links = [
-    { name: 'home', label: 'Home' },
-    { name: 'about', label: 'About' },
-    { name: 'services', label: 'Skills' },
-    { name: 'portfolio', label: 'Portfolio' },
-    { name: 'contact', label: 'Contact' },
-  ];
 
   const handleClick = (link: string) => {
     setActiveLink(link);

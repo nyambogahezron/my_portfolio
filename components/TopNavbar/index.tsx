@@ -6,14 +6,10 @@ interface TopNavbarProps {
   openAsideNav: boolean;
 }
 
-const TopNavbar: React.FC<TopNavbarProps> = ({
-  SetOpenAsideNav,
-  openAsideNav,
-}) => {
+const TopNavbar: React.FC<TopNavbarProps> = () => {
   return (
     <div className={styles.topNav}>
       <div className={styles.wrapper}>
-        <div className={styles.menuToggle}></div>
         <ThemeToggle />
       </div>
     </div>

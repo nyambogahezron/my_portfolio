@@ -107,4 +107,13 @@ const educationItem = [
                              contribute to.`,
   },
 ];
-export { AboutItems, AboutLanguagesItems, timelineItem, educationItem };
+
+const links = [
+  { name: 'home', label: 'Home' },
+  { name: 'about', label: 'About' },
+  { name: 'services', label: 'Skills' },
+  { name: 'portfolio', label: 'Portfolio' },
+  { name: 'contact', label: 'Contact' },
+];
+
+export { AboutItems, AboutLanguagesItems, timelineItem, educationItem, links };

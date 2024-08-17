@@ -1,5 +1,4 @@
 .about {
-  margin-left: -15px;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -10,6 +9,7 @@
   color: var(--text-black-700);
 }
 .about .aboutContent .wrapper {
+  margin-left: -10px;
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(2, 1fr);
@@ -56,6 +56,16 @@
   border: 1px solid #bbb;
   min-height: 200px;
   transition: opacity 0.3s ease;
+}
+
+@media screen and (max-width: 500px) {
+  .about .aboutContent .wrapper {
+    margin-bottom: 20px;
+  }
+  .content {
+    width: 100%;
+    margin: 0 -15px;
+  }
 }
 
 .about .aboutContent .timeline .timelineItem:last-child {
