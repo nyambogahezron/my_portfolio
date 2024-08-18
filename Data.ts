@@ -4,9 +4,71 @@ import {
   FaLinkedin,
   FaInstagram,
   FaGithub,
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaLaravel,
+  FaPhp,
+  FaReact,
+  FaPython,
+  FaDatabase,
+  FaNodeJs,
 } from 'react-icons/fa';
 
-const socialLinks = [
+interface SocialLink {
+  platform: string;
+  href: string;
+  Icon: React.ComponentType;
+}
+
+interface AboutItem {
+  id: number;
+  name: string;
+  item: string;
+}
+
+interface AboutLanguageItem {
+  id: number;
+  name: string;
+  percent: string;
+}
+
+interface TimelineItem {
+  id: number;
+  date: string;
+  title: string;
+  body: string;
+}
+
+interface EducationItem {
+  id: number;
+  date: string;
+  title: string;
+  body: string;
+}
+
+interface Link {
+  name: string;
+  label: string;
+}
+
+interface LanguageItem {
+  id: number;
+  name: string;
+  Icon: React.ComponentType;
+}
+
+interface PortfolioItem {
+  id: number;
+  title: string;
+  github: string;
+  site: string;
+  img: string;
+  desc: string;
+}
+
+// Convert arrays to TypeScript
+const socialLinks: SocialLink[] = [
   { platform: 'facebook', href: '#', Icon: FaFacebook },
   { platform: 'twitter', href: '#', Icon: FaTwitter },
   { platform: 'linkedin', href: '#', Icon: FaLinkedin },
@@ -14,63 +76,71 @@ const socialLinks = [
   { platform: 'github', href: '#', Icon: FaGithub },
 ];
 
-const AboutItems = [
-  {
-    id: 1,
-    name: 'Email',
-    item: 'hezronnyamboga6@gmail.com',
-  },
-  {
-    id: 2,
-    name: 'Degree',
-    item: 'CS',
-  },
-  {
-    id: 3,
-    name: 'Certifications',
-    item: 'CCNA',
-  },
-  {
-    id: 4,
-    name: 'Phone',
-    item: '+254 7945 917 84',
-  },
-  {
-    id: 5,
-    name: 'Freelance',
-    item: 'Available',
-  },
+const AboutItems: AboutItem[] = [
+  { id: 1, name: 'Email', item: 'hezronnyamboga6@gmail.com' },
+  { id: 2, name: 'Degree', item: 'CS' },
+  { id: 3, name: 'Certifications', item: 'CCNA' },
+  { id: 4, name: 'Phone', item: '+254 7945 917 84' },
+  { id: 5, name: 'Freelance', item: 'Available' },
 ];
 
-const AboutLanguagesItems = [
+const AboutLanguagesItems: AboutLanguageItem[] = [
+  { id: 1, name: 'CSS', percent: '90%' },
+  { id: 2, name: 'JS', percent: '87%' },
+  { id: 3, name: 'NODE JS', percent: '90%' },
+  { id: 4, name: 'PHP', percent: '80%' },
+  { id: 5, name: 'HTML', percent: '96%' },
+];
+
+const languagesListData: LanguageItem[] = [
   {
     id: 1,
-    name: 'CSS',
-    percent: '90%',
-  },
-  {
-    id: 2,
-    name: 'JS',
-    percent: '87%',
-  },
-  {
-    id: 3,
-    name: 'NODE JS',
-    percent: '90%',
-  },
-  {
-    id: 4,
-    name: 'PHP',
-    percent: '80%',
-  },
-  {
-    id: 5,
     name: 'HTML',
-    percent: '96%',
+    Icon: FaHtml5,
+  },
+  {
+    id: 2,
+    name: 'CSS',
+    Icon: FaCss3Alt,
+  },
+  {
+    id: 3,
+    name: 'JavaScript',
+    Icon: FaJsSquare,
+  },
+  {
+    id: 4,
+    name: 'Laravel',
+    Icon: FaLaravel,
+  },
+  {
+    id: 5,
+    name: 'PHP',
+    Icon: FaPhp,
+  },
+  {
+    id: 6,
+    name: 'React JS',
+    Icon: FaReact,
+  },
+  {
+    id: 7,
+    name: 'Django',
+    Icon: FaPython,
+  },
+  {
+    id: 8,
+    name: 'SQL',
+    Icon: FaDatabase,
+  },
+  {
+    id: 9,
+    name: 'MongoDB',
+    Icon: FaNodeJs,
   },
 ];
 
-const timelineItem = [
+const timelineItem: TimelineItem[] = [
   {
     id: 1,
     date: '2023 - 2024',
@@ -96,7 +166,8 @@ const timelineItem = [
                           mindset`,
   },
 ];
-const educationItem = [
+
+const educationItem: EducationItem[] = [
   {
     id: 1,
     date: '2023 - 2024',
@@ -124,7 +195,7 @@ const educationItem = [
   },
 ];
 
-const links = [
+const links: Link[] = [
   { name: 'home', label: 'Home' },
   { name: 'about', label: 'About' },
   { name: 'services', label: 'Skills' },
@@ -132,7 +203,7 @@ const links = [
   { name: 'contact', label: 'Contact' },
 ];
 
-const portfolioItems = [
+const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
     title: 'Delightful Restaurant',
@@ -172,6 +243,7 @@ const portfolioItems = [
                     foster meaningful connections and creative expression.`,
   },
 ];
+
 export {
   AboutItems,
   AboutLanguagesItems,
@@ -180,4 +252,5 @@ export {
   links,
   portfolioItems,
   socialLinks,
+  languagesListData,
 };
