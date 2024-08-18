@@ -212,3 +212,23 @@ p {
     padding: 10px 15px;
   }
 }
+
+.col6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-right: 10px;
+}
+.col12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-right: 10px;
+}
+
+@media (max-width: 970px) {
+  .col6,
+  .col12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-right: 10px;
+  }
+}

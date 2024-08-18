@@ -1,28 +1,29 @@
-import SocialLinks from '../../components/Sociallinks';
+import SocialLinks from '../../components/SocialLinks';
 import { FaEnvelope, FaGlobe, FaPhone } from 'react-icons/fa';
 import ContactForm from '../../components/ContactForm';
+import styles from './index.module.css';
 
 const Contact = () => {
   return (
-    <section className='contact section' id='contact'>
+    <section className={`${styles.contact} section`} id='contact'>
       <div className='container'>
         <div className='row'>
           <div className='section-title'>
             <h2>Contact Me</h2>
           </div>
         </div>
-        <h3 className='contact-title'>Have You Any Question</h3>
-        <h4 className='contact-sub-title'>{`I'M AT YOUR SERVICES`}</h4>
-        <div className='row contact-st'>
-          <div className='contact-info-item'>
-            <div className='icon'>
+        <h3 className={styles.contactTitle}>Have You Any Question</h3>
+        <h4 className={styles.contactSubTitle}>{`I'M AT YOUR SERVICES`}</h4>
+        <div className={`${styles.contactSt} ${styles.row}`}>
+          <div className={styles.contactInfoItem}>
+            <div className={styles.icon}>
               <FaPhone />
             </div>
             <h4>Call, whatsApp</h4>
             <p>+254 794 5917 84</p>
           </div>
-          <div className='contact-info-item'>
-            <div className='icon'>
+          <div className={styles.contactInfoItem}>
+            <div className={styles.icon}>
               <FaGlobe />
             </div>
             <h4>Social Media</h4>
@@ -30,8 +31,8 @@ const Contact = () => {
               <SocialLinks />
             </div>
           </div>
-          <div className='contact-info-item'>
-            <div className='icon'>
+          <div className={styles.contactInfoItem}>
+            <div className={styles.icon}>
               <FaEnvelope />
             </div>
             <h4>Email</h4>

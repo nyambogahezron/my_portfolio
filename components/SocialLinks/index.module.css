@@ -1,0 +1,28 @@
+.socialLinks {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.socialLinks li {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+.socialLinks li:hover {
+  background: #f4f4f4;
+  transform: scale(1.2);
+}
+.socialLinks .faBrands {
+  width: 100%;
+  font-size: 25px;
+  margin-top: 1px;
+  color: var(--skin-color);
+}

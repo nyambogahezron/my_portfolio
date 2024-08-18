@@ -1,23 +1,40 @@
 import PropTypes from 'prop-types';
+import styles from '../pages/Contact/index.module.css';
+import React from 'react';
 
-const InputField = ({ type, id, className, placeholder, colSize, value, onChange }) => {
-    return (
-        <div className={`form-item ${colSize}`}>
-            <div className="form-group">
-                <input type={type} id={id} className={`form-control ${className}`} placeholder={placeholder} value={value} onChange={onChange} />
-            </div>
-        </div>
-    );
+interface InputFieldProps {
+  type: string;
+  id: string;
+  className: string;
+  placeholder: string;
+  colSize: string;
+  value: string;
+  onChange: func;
 }
 
-InputField.propTypes = {
-    type: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired,
-    className: PropTypes.string.isRequired,
-    placeholder: PropTypes.string.isRequired,
-    colSize: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired,
+const InputField: React.FC<InputFieldProps> = ({
+  type,
+  id,
+  className,
+  placeholder,
+  colSize,
+  value,
+  onChange,
+}) => {
+  return (
+    <div className={`${styles.formItem}  ${colSize}`}>
+      <div className={styles.formGroup}>
+        <input
+          type={type}
+          id={id}
+          className={`${styles.formControl} ${className}`}
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+        />
+      </div>
+    </div>
+  );
 };
 
 export default InputField;

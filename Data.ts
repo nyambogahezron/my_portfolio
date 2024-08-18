@@ -1,3 +1,19 @@
+import {
+  FaFacebook,
+  FaTwitter,
+  FaLinkedin,
+  FaInstagram,
+  FaGithub,
+} from 'react-icons/fa';
+
+const socialLinks = [
+  { platform: 'facebook', href: '#', Icon: FaFacebook },
+  { platform: 'twitter', href: '#', Icon: FaTwitter },
+  { platform: 'linkedin', href: '#', Icon: FaLinkedin },
+  { platform: 'instagram', href: '#', Icon: FaInstagram },
+  { platform: 'github', href: '#', Icon: FaGithub },
+];
+
 const AboutItems = [
   {
     id: 1,
@@ -163,4 +179,5 @@ export {
   educationItem,
   links,
   portfolioItems,
+  socialLinks,
 };

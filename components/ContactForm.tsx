@@ -1,130 +1,132 @@
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import InputField from "./inputField";
-import { useState } from "react";
+import InputField from './inputField';
+import { useState } from 'react';
+import styles from '../pages/Contact/index.module.css';
 
-const ContactForm = ()=>{
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [subject, setSubject] = useState("");
-    const [message, setMessage] = useState("");
-    const [isLoading, setIsLoading] = useState(false);
+const ContactForm = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
-const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const formData = { name, email, subject, message };
 
     if (!name || !email || !subject || !message) {
-        toast.error("Please provide all fields");
-        return;
+      toast.error('Please provide all fields');
+      return;
     }
     setIsLoading(true);
 
     try {
-        const response = await fetch('https://send-mail-b2yq.onrender.com/api/sendmail', {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(formData),
-        });
-
-        if (!response.ok) {
-            throw new Error(`An error has occured: ${response.status}`);
+      const response = await fetch(
+        'https://send-mail-b2yq.onrender.com/api/sendmail',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
         }
+      );
 
-        const responseData = await response.json();
-        // console.log(responseData)
+      if (!response.ok) {
+        throw new Error(`An error has occured: ${response.status}`);
+      }
 
-        toast.success("Message sent successfully");
-        // Reset form fields
-        setName("");
-        setEmail("");
-        setSubject("");
-        setMessage("");
+      const responseData = await response.json();
+      // console.log(responseData)
+
+      toast.success('Message sent successfully');
+      // Reset form fields
+      setName('');
+      setEmail('');
+      setSubject('');
+      setMessage('');
     } catch (error) {
-        toast.error("Error: " + error.message);
+      toast.error('Error: ' + error.message);
     }
     setIsLoading(false);
-};
+  };
 
-    return( 
+  return (
     <>
-        <ToastContainer />
+      <ToastContainer />
 
-    <h3 className="contact-title">SEND ME AN EMAIL</h3>
-                <h4 className="contact-sub-title">{`I'M VERY RESPONSIVE TO MESSAGES`}</h4>
-                {isLoading && (
-                <div className="alert">
-                    <div className="form-info showAlert" />
-                    <span>Loading...</span>
-                    <span className="loader showLoader"></span>
+      <h3 className={styles.contactTitle}>SEND ME AN EMAIL</h3>
+      <h4
+        className={styles.contactSubTitle}
+      >{`I'M VERY RESPONSIVE TO MESSAGES`}</h4>
+      {isLoading && (
+        <div className={styles.alert}>
+          <div className={`${styles.formInfo} ${styles.showAlert}`} />
+          <span>Loading...</span>
+          <span className={`${styles.loader} ${styles.showLoader}`}></span>
+        </div>
+      )}
+      <div className={styles.form}>
+        <form className={styles.sendMail} onSubmit={handleSubmit}>
+          <div className={styles.contactForm}>
+            <div className='row'>
+              <InputField
+                type='text'
+                id='name'
+                className='name'
+                placeholder='Name'
+                colSize='col6'
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+              <InputField
+                type='email'
+                id='email'
+                className='email'
+                placeholder='Email'
+                colSize='col6'
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className='row'>
+              <InputField
+                type='text'
+                id='subject'
+                className='subject'
+                placeholder='Subject'
+                colSize='col12'
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+              />
+            </div>
+            <div className='row'>
+              <div className={`${styles.formItem} col12`}>
+                <div className='form-group'>
+                  <textarea
+                    name='message'
+                    className={`${styles.formControl} message`}
+                    id='message'
+                    placeholder='Message'
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                  />
                 </div>
-            )}
-                <div >
-                    <form className="sendMail" onSubmit={handleSubmit}>
-                        <div className="contact-form">
-                            <div className="row">
-                                <InputField
-                                    type="text"
-                                    id="name"
-                                    className="name"
-                                    placeholder="Name"
-                                    colSize="col-6"
-                                    value={name}
-                                    onChange={(e) => setName(e.target.value)}
-
-                                />
-                                <InputField
-                                    type="email"
-                                    id="email"
-                                    className="email"
-                                    placeholder="Email"
-                                    colSize="col-6"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-
-                                />
-                            </div>
-                            <div className="row">
-                                <InputField
-                                    type="text"
-                                    id="subject"
-                                    className="subject"
-                                    placeholder="Subject"
-                                    colSize="col-12"
-                                    value={subject}
-                                    onChange={(e) => setSubject(e.target.value)}
-                                />
-                            </div>
-                            <div className="row">
-                                <div className="form-item col-12">
-                                    <div className="form-group">
-                                        <textarea
-                                            name="message"
-                                            className="form-control message"
-                                            id="message"
-                                            placeholder="Message"
-                                            value={message}
-                                            onChange={(e) =>
-                                                setMessage(e.target.value)
-                                            }
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="form-item col-12">
-                                    <button className="btn" type="submit">
-                                        Send Message
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-        </>
-    )
+              </div>
+            </div>
+            <div className='row'>
+              <div className={`${styles.formItem} ${styles.col12}`}>
+                <button className={`btn ${styles.btn}  }`} type='submit'>
+                  Send Message
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </>
+  );
 };
 export default ContactForm;
