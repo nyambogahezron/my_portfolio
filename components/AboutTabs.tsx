@@ -1,10 +1,8 @@
 import EducationSection from './educationSection';
 import ExperienceSection from './experienceSection';
-import { useState } from 'react';
 import styles from '../pages/About/index.module.css';
 
 const AboutTabs = () => {
-  const [activeTab, setActiveTab] = useState('EducationTab');
   return (
     <div className={styles.timelineRow}>
       <div>

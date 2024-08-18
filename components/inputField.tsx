@@ -1,6 +1,5 @@
-import PropTypes from 'prop-types';
 import styles from '../pages/Contact/index.module.css';
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 
 interface InputFieldProps {
   type: string;
@@ -9,10 +8,10 @@ interface InputFieldProps {
   placeholder: string;
   colSize: string;
   value: string;
-  onChange: func;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const InputField: React.FC<InputFieldProps> = ({
+const InputField = ({
   type,
   id,
   className,
@@ -20,9 +19,9 @@ const InputField: React.FC<InputFieldProps> = ({
   colSize,
   value,
   onChange,
-}) => {
+}: InputFieldProps) => {
   return (
-    <div className={`${styles.formItem}  ${colSize}`}>
+    <div className={`${styles.formItem} ${colSize}`}>
       <div className={styles.formGroup}>
         <input
           type={type}

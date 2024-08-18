@@ -1,6 +1,5 @@
 import AboutTabs from '../../components/AboutTabs';
 import AboutPersonalInfo from '../../components/AboutPersonalInfo';
-import AboutSkills from '../../components/AboutSkills';
 import styles from './index.module.css';
 
 const About = () => {
@@ -35,10 +34,6 @@ const About = () => {
                 <AboutPersonalInfo />
               </div>
             </div>
-            {/* <div className={styles.personalInfoContainer}>
-              <AboutSkills />
-            </div> */}
-
             {/* Education Section  */}
             <AboutTabs />
           </div>

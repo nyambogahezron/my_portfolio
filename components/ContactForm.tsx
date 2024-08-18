@@ -1,20 +1,28 @@
+'use client';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import InputField from './inputField';
-import { useState } from 'react';
+import { useState, FormEvent, ChangeEvent } from 'react';
 import styles from '../pages/Contact/index.module.css';
 
-const ContactForm = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
+interface FormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
 
-  const handleSubmit = async (e) => {
+const ContactForm = () => {
+  const [name, setName] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [subject, setSubject] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const formData = { name, email, subject, message };
+    const formData: FormData = { name, email, subject, message };
 
     if (!name || !email || !subject || !message) {
       toast.error('Please provide all fields');
@@ -47,7 +55,7 @@ const ContactForm = () => {
       setEmail('');
       setSubject('');
       setMessage('');
-    } catch (error) {
+    } catch (error: any) {
       toast.error('Error: ' + error.message);
     }
     setIsLoading(false);
@@ -79,7 +87,9 @@ const ContactForm = () => {
                 placeholder='Name'
                 colSize='col6'
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                  setName(e.target.value)
+                }
               />
               <InputField
                 type='email'
@@ -88,7 +98,9 @@ const ContactForm = () => {
                 placeholder='Email'
                 colSize='col6'
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                  setEmail(e.target.value)
+                }
               />
             </div>
             <div className='row'>
@@ -99,7 +111,9 @@ const ContactForm = () => {
                 placeholder='Subject'
                 colSize='col12'
                 value={subject}
-                onChange={(e) => setSubject(e.target.value)}
+                onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                  setSubject(e.target.value)
+                }
               />
             </div>
             <div className='row'>
@@ -111,7 +125,9 @@ const ContactForm = () => {
                     id='message'
                     placeholder='Message'
                     value={message}
-                    onChange={(e) => setMessage(e.target.value)}
+                    onChange={(e: ChangeEvent<HTMLTextAreaElement>) =>
+                      setMessage(e.target.value)
+                    }
                   />
                 </div>
               </div>

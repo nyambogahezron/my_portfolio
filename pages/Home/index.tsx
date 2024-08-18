@@ -5,18 +5,10 @@ import TopNavbar from '../../components/TopNavbar';
 import styles from './index.module.css';
 import LanguagesList from './languagesList';
 
-interface HomeProps {
-  SetOpenAsideNav: (open: boolean) => void;
-  openAsideNav: boolean;
-}
-
-const Home: React.FC<HomeProps> = ({ SetOpenAsideNav, openAsideNav }) => {
+const Home = () => {
   return (
     <section className={styles.home} id='home'>
-      <TopNavbar
-        SetOpenAsideNav={SetOpenAsideNav}
-        openAsideNav={openAsideNav}
-      />
+      <TopNavbar />
       <div className='container'>
         <div className='row'>
           <div className={styles.homeInfo}>

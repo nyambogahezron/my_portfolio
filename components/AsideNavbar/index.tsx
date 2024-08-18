@@ -1,16 +1,11 @@
+'use client';
 import { useState } from 'react';
 import styles from './index.module.css';
 import { links } from '@/Data';
-interface AsideNavbarProps {
-  openAsideNav: boolean;
-  SetOpenAsideNav: (open: boolean) => void;
-}
 
-const AsideNavbar: React.FC<AsideNavbarProps> = ({
-  SetOpenAsideNav,
-  openAsideNav,
-}) => {
+const AsideNavbar = () => {
   const [activeLink, setActiveLink] = useState<string>('home');
+  const [openAsideNav, SetOpenAsideNav] = useState(false);
 
   const handleClick = (link: string) => {
     setActiveLink(link);
