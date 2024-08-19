@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import styles from './index.module.css';
 import { links } from '@/Data';
+import Link from 'next/link';
 
 const AsideNavbar = () => {
   const [activeLink, setActiveLink] = useState<string>('home');
@@ -28,8 +29,8 @@ const AsideNavbar = () => {
       <ul className={styles.nav}>
         {links.map((link) => (
           <li key={link.name}>
-            <a
-              href={`#${link.name}`}
+            <Link
+              href={`/${link.name}`}
               className={
                 activeLink === link.name
                   ? `${styles.navLink} ${styles.active}`
@@ -38,7 +39,7 @@ const AsideNavbar = () => {
               onClick={() => handleClick(link.name)}
             >
               {link.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

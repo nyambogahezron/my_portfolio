@@ -1,7 +1,5 @@
 import AsideNavbar from '../components/AsideNavbar';
 import Home from '../pages/Home';
-import About from '../pages/About';
-import Skills from '../pages/Skills';
 import Portfolio from '../pages/Portfolio';
 import Contact from '../pages/Contact';
 import LoadingWrapper from '@/components/LoadingWrapper';
@@ -15,8 +13,8 @@ const HomePage = () => {
         </aside>
         <main className='main-content'>
           <Home />
-          <About />
-          <Skills />
+          {/* <About />
+          <Skills /> */}
           <Portfolio />
           <Contact />
         </main>
