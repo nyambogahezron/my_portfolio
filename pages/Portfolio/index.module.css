@@ -1,6 +1,5 @@
 .portfolio {
   max-width: 1200px;
-  border: 1px solid #d33737;
   margin: 0 auto;
 }
 #portfolio .container {
@@ -200,6 +199,19 @@
   100% {
     transform: scale(1);
   }
+}
+
+.viewAll {
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.viewAllLink{
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
 }
 
 @media (max-width: 893px) {

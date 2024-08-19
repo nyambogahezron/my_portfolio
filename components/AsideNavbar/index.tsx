@@ -30,7 +30,7 @@ const AsideNavbar = () => {
         {links.map((link) => (
           <li key={link.name}>
             <Link
-              href={`/${link.name}`}
+              href={`${link.link}`}
               className={
                 activeLink === link.name
                   ? `${styles.navLink} ${styles.active}`

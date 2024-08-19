@@ -1,5 +1,4 @@
 .contact {
-  border: 1px solid red;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -58,7 +57,7 @@
   font-weight: 400;
 }
 .form{
-  width: 85%;
+  width: 95%;
 }
 .form form {
   display: flex;
@@ -166,6 +165,9 @@
     padding: 0 30px;
     margin-left: 5px;
   }
+  .form{
+  width: 100%;
+}
 }
 @media (max-width: 530px) {
   .contactSt {

@@ -8,7 +8,7 @@ import LanguagesList from './languagesList';
 const Home = () => {
   return (
     <section className={styles.home} id='home'>
-      <TopNavbar />
+      {/* <TopNavbar /> */}
       <div className='container'>
         <div className='row'>
           <div className={styles.homeInfo}>

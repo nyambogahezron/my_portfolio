@@ -50,6 +50,7 @@ interface EducationItem {
 interface Link {
   name: string;
   label: string;
+  link?: string;
 }
 
 interface LanguageItem {
@@ -196,11 +197,10 @@ const educationItem: EducationItem[] = [
 ];
 
 const links: Link[] = [
-  { name: 'home', label: 'Home' },
-  { name: 'about', label: 'About' },
-  { name: 'services', label: 'Skills' },
-  { name: 'portfolio', label: 'Portfolio' },
-  { name: 'contact', label: 'Contact' },
+  { name: 'home', label: 'Home', link: '/' },
+  { name: 'blogs', label: 'Blog', link: '/blogs' },
+  { name: 'portfolio', label: 'Portfolio', link: '/projects' },
+  { name: 'contact', label: 'Contact', link: '/#contact' },
 ];
 
 const portfolioItems: PortfolioItem[] = [
@@ -232,6 +232,44 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 3,
+    title: 'Social Connect',
+    github: 'https://github.com/nyambogahezron',
+    site: 'https://social-theme.vercel.app/',
+    img: '/images/social.PNG',
+    desc: `This revolutionary social media application, a dynamic
+                    platform designed to connect, engage, and inspire users
+                    around the world. Our application redefines the social
+                    networking experience, offering a range of features that
+                    foster meaningful connections and creative expression.`,
+  },
+  {
+    id: 4,
+    title: 'Delightful Restaurant',
+    github: 'https://github.com/nyambogahezron',
+    site: 'https://delightful-restaurant.vercel.app/',
+    img: '/images/res.PNG',
+    desc: `I spearheaded a dynamic restaurant project that seamlessly
+          blends technology with the culinary world to enhance the
+          dining experience. This innovative venture focuses on
+          digital menu management, online ordering, table reservation,
+          revolutionizing the way patrons interact with our
+          establishment.`,
+  },
+  {
+    id: 5,
+    title: 'Stock Market',
+    github: 'https://github.com/nyambogahezron',
+    site: 'https://stock-market-app-seven.vercel.app/',
+    img: '/images/stock.PNG',
+    desc: `This is a dynamic e-commerce application, a digital
+                    marketplace designed to redefine the online shopping
+                    experience. Seamlessly merging functionality with
+                    user-friendly design, this platform offers a comprehensive
+                    range of products and services, catering to the diverse
+                    needs of our global clientele`,
+  },
+  {
+    id: 6,
     title: 'Social Connect',
     github: 'https://github.com/nyambogahezron',
     site: 'https://social-theme.vercel.app/',

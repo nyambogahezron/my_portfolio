@@ -6,20 +6,13 @@ import LoadingWrapper from '@/components/LoadingWrapper';
 
 const HomePage = () => {
   return (
-    <LoadingWrapper>
-      <div>
-        <aside>
-          <AsideNavbar />
-        </aside>
-        <main className='main-content'>
-          <Home />
-          {/* <About />
-          <Skills /> */}
-          <Portfolio />
-          <Contact />
-        </main>
-      </div>
-    </LoadingWrapper>
+    <>
+      <Home />
+      {/* <About />
+   <Skills /> */}
+      <Portfolio />
+      <Contact />
+    </>
   );
 };
 

@@ -1,9 +1,10 @@
+import Link from 'next/link';
 import styles from './index.module.css';
 import PortfolioCard from '@/components/PortfolioCard';
+import { portfolioItems } from '@/Data';
 
 const Portfolio = () => {
-
-
+  const data = portfolioItems.slice(0, 3);
   return (
     <section className={`${styles.portfolio} section`} id='portfolio'>
       <div className={styles.container}>
@@ -17,11 +18,14 @@ const Portfolio = () => {
             <h2>My Projects</h2>
           </div>
         </div>
-        <div className={styles.portfolioCard}>
-        <PortfolioCard />
+        <div>
+          <PortfolioCard data={data} />
         </div>
-
-        <div>View All</div>
+        <Link href='/projects' className={styles.viewAllLink}>
+          <div className={`${styles.viewAll}`}>
+            <button className='btn'>View All</button>
+          </div>
+        </Link>
       </div>
     </section>
   );
