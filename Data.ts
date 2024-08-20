@@ -66,6 +66,7 @@ interface PortfolioItem {
   site: string;
   img: string;
   desc: string;
+  category: string;
 }
 
 // Convert arrays to TypeScript
@@ -216,6 +217,7 @@ const portfolioItems: PortfolioItem[] = [
           digital menu management, online ordering, table reservation,
           revolutionizing the way patrons interact with our
           establishment.`,
+    category: 'Web',
   },
   {
     id: 2,
@@ -229,6 +231,7 @@ const portfolioItems: PortfolioItem[] = [
                     user-friendly design, this platform offers a comprehensive
                     range of products and services, catering to the diverse
                     needs of our global clientele`,
+    category: 'Web',
   },
   {
     id: 3,
@@ -241,6 +244,7 @@ const portfolioItems: PortfolioItem[] = [
                     around the world. Our application redefines the social
                     networking experience, offering a range of features that
                     foster meaningful connections and creative expression.`,
+    category: 'Web',
   },
   {
     id: 4,
@@ -254,6 +258,7 @@ const portfolioItems: PortfolioItem[] = [
           digital menu management, online ordering, table reservation,
           revolutionizing the way patrons interact with our
           establishment.`,
+    category: 'Web Apps',
   },
   {
     id: 5,
@@ -267,6 +272,7 @@ const portfolioItems: PortfolioItem[] = [
                     user-friendly design, this platform offers a comprehensive
                     range of products and services, catering to the diverse
                     needs of our global clientele`,
+    category: 'Web Apps',
   },
   {
     id: 6,
@@ -279,6 +285,7 @@ const portfolioItems: PortfolioItem[] = [
                     around the world. Our application redefines the social
                     networking experience, offering a range of features that
                     foster meaningful connections and creative expression.`,
+    category: 'APIs',
   },
 ];
 

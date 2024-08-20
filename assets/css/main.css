@@ -72,6 +72,10 @@ html {
   align-items: center;
   justify-content: center;
 }
+
+.section.pageSection{
+  padding-top: 60px;
+}
 .section-title {
   flex: 0 0 100%;
   max-width: 100%;

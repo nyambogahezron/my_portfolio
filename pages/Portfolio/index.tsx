@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styles from './index.module.css';
-import PortfolioCard from '@/components/PortfolioCard';
+import PortfolioCard from '@/components/PortfolioItems';
 import { portfolioItems } from '@/Data';
 
 const Portfolio = () => {
