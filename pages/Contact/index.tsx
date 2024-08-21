@@ -12,7 +12,7 @@ const Contact = () => {
             <h2>Contact Me</h2>
           </div>
         </div>
-        <h3 className={styles.contactTitle}>Have You Any Question</h3>
+        <h3 className={styles.contactTitle}>Have Any Question ?</h3>
         <h4 className={styles.contactSubTitle}>{`I'M AT YOUR SERVICES`}</h4>
         <div className={`${styles.contactSt} ${styles.row}`}>
           <div className={styles.contactInfoItem}>

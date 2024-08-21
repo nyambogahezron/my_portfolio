@@ -8,8 +8,6 @@ const HomePage = () => {
   return (
     <>
       <Home />
-      {/* <About />
-   <Skills /> */}
       <Portfolio />
       <Contact />
     </>

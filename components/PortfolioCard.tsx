@@ -1,9 +1,11 @@
+import Link from 'next/link';
 import { useState } from 'react';
 import { FaGithub } from 'react-icons/fa';
 
 interface PortfolioCardProps {
   item: PortfolioItem;
   styles: any;
+  isForProject?: boolean
 }
 
 interface PortfolioItem {
@@ -15,17 +17,13 @@ interface PortfolioItem {
   github: string;
 }
 
-export default function PortfolioCard({
-  item,
-
-  styles,
-}: PortfolioCardProps) {
+export default function PortfolioCard({ item, styles, isForProject }: PortfolioCardProps) {
   const [flipped, setFlipped] = useState<number[]>([]);
 
   const flip = (id: number) => {
     setFlipped([...flipped, id]);
   };
-
+ 
   const unFlip = (id: number) => {
     setFlipped(flipped.filter((item) => item !== id));
   };
@@ -53,10 +51,14 @@ export default function PortfolioCard({
           <p>{item.desc}</p>
         </div>
         <div className={styles.action}>
-          {flipped.includes(item.id) ? (
-            <button onClick={() => unFlip(item.id)}>Back</button>
+          {isForProject ? (
+            flipped.includes(item.id) ? (
+              <button onClick={() => unFlip(item.id)}>Back</button>
+            ) : (
+              <button onClick={() => flip(item.id)}>More</button>
+            )
           ) : (
-            <button onClick={() => flip(item.id)}>More</button>
+            <Link href={`projects/${item.id}`}>View More</Link>
           )}
           <div className={styles.site}>
             <span>

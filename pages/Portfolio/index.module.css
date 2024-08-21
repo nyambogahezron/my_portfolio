@@ -45,7 +45,7 @@
   align-items: center;
   transition: all 0.2s ease;
   text-align: center;
-  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+  box-shadow: 0 0 20px var(--shadow-2);
 }
 .card {
   width: 380px;
@@ -53,15 +53,15 @@
   position: relative;
   perspective: 1500px;
   margin: 0 auto;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-clr);
   border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 10px 20px var(--shadow-1), 0 6px 6px var(--shadow-clr-dark);
   overflow: hidden;
   transition: all 0.3s ease;
   background: var(--bg-black-900);
 }
 .card:hover {
-  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+  box-shadow: 0 0 20px var(--shadow-2);
 }
 .card .image {
   position: absolute;

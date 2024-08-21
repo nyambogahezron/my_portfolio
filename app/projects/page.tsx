@@ -22,58 +22,56 @@ export default function Projects() {
       : portfolioItems.filter((item) => item.category === selectedCategory);
 
   return (
-    <>
-      <section
-        className={`${styles.portfolio} section pageSection`}
-        id='portfolio'
-      >
-        <div className={styles.container}>
-          <div className='row min-nav'>
-            <div className='home-link'>
-              <Link href='/'>Home</Link>
-            </div>
-            <span>/</span>
-            <div>Portfolio</div>
+    <section
+      className={`${styles.portfolio} section pageSection`}
+      id='portfolio'
+    >
+      <div className={styles.container}>
+        <div className='row min-nav'>
+          <div className='home-link'>
+            <Link href='/'>Home</Link>
           </div>
-          <div className='row'>
-            <div className={styles.portfolioHeading}>
-              <h2>My Projects</h2>
-            </div>
-          </div>
-          <div className={styles.headerNav}>
-            <div className={styles.wrapper}>
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  className={`${styles.navButton} ${
-                    selectedCategory === category ? styles.active : ''
-                  }`}
-                  onClick={() => setSelectedCategory(category)}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <TransitionGroup className={styles.portfolioGrid}>
-            {filteredItems.map((item) => (
-              <CSSTransition
-                key={item.id}
-                timeout={500}
-                classNames={{
-                  enter: styles.itemEnter,
-                  enterActive: styles.itemEnterActive,
-                  exit: styles.itemExit,
-                  exitActive: styles.itemExitActive,
-                }}
-              >
-                <PortfolioCard data={[item]} />
-              </CSSTransition>
-            ))}
-          </TransitionGroup>
+          <span>/</span>
+          <div className='text'>Portfolio</div>
         </div>
-      </section>
-    </>
+        <div className='row'>
+          <div className={styles.portfolioHeading}>
+            <h2>My Projects</h2>
+          </div>
+        </div>
+        <div className={styles.headerNav}>
+          <div className={styles.wrapper}>
+            {categories.map((category) => (
+              <button
+                key={category}
+                className={`${styles.navButton} ${
+                  selectedCategory === category ? styles.active : ''
+                }`}
+                onClick={() => setSelectedCategory(category)}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <TransitionGroup className={styles.portfolioGrid}>
+          {filteredItems.map((item) => (
+            <CSSTransition
+              key={item.id}
+              timeout={500}
+              classNames={{
+                enter: styles.itemEnter,
+                enterActive: styles.itemEnterActive,
+                exit: styles.itemExit,
+                exitActive: styles.itemExitActive,
+              }}
+            >
+              <PortfolioCard data={[item]} isForProject={true} />
+            </CSSTransition>
+          ))}
+        </TransitionGroup>
+      </div>
+    </section>
   );
 }

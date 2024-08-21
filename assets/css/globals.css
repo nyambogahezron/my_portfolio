@@ -16,6 +16,10 @@
   --text-white: #2c2c2c;
   --text-color-1: #000;
   --color-red: #ec1839;
+  --border-clr: #ccc;
+  --shadow-1: rgba(0, 0, 0, 0.19);
+  --shadow-2: rgba(48, 46, 77, 0.15);
+  --shadow-clr-dark: rgba(0, 0, 0, 0.23);
 }
 body.dark {
   --bg-black-900: #333;
@@ -26,6 +30,10 @@ body.dark {
   --text-black-700: #e9e9e9;
   --text-white: #000;
   --text-color-1: #fff;
+  --border-clr: #1a1818;
+  --shadow-1: rgba(2, 1, 1, 0.824);
+  --shadow-2: rgba(163, 158, 235, 0.15);
+  --shadow-clr-dark: rgba(9, 9, 9, 0.23);
 }
 body {
   line-height: 1.5;
@@ -89,6 +97,7 @@ html {
   max-width: 100%;
   margin-bottom: 50px;
   padding-left: 40px;
+  margin-top: 25px;
 }
 .section-title h2 {
   font-size: 40px;
@@ -245,6 +254,8 @@ p {
   }
 }
 
+/* min nav header  */
+
 .min-nav {
   display: flex;
   position: relative;
@@ -258,4 +269,13 @@ p {
   color: var(--skin-color);
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+.min-nav span , .min-nav .text{
+  color: var(--text-color-1);
+}
+.min-nav span {
+  margin-top: -1px;
+  font-size: 20px;
+  font-weight: bold;
 }
