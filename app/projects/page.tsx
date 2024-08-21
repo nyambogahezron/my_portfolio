@@ -28,13 +28,12 @@ export default function Projects() {
         id='portfolio'
       >
         <div className={styles.container}>
-          <div className='row'>
-            <div className='section-title'>
-              <h2>Portfolio</h2>
+          <div className='row min-nav'>
+            <div className='home-link'>
+              <Link href='/'>Home</Link>
             </div>
-          </div>
-          <div className='row'>
-            <Link href='/'>Go Back</Link>
+            <span>/</span>
+            <div>Portfolio</div>
           </div>
           <div className='row'>
             <div className={styles.portfolioHeading}>
@@ -42,17 +41,19 @@ export default function Projects() {
             </div>
           </div>
           <div className={styles.headerNav}>
-            {categories.map((category) => (
-              <button
-                key={category}
-                className={`${styles.navButton} ${
-                  selectedCategory === category ? styles.active : ''
-                }`}
-                onClick={() => setSelectedCategory(category)}
-              >
-                {category}
-              </button>
-            ))}
+            <div className={styles.wrapper}>
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  className={`${styles.navButton} ${
+                    selectedCategory === category ? styles.active : ''
+                  }`}
+                  onClick={() => setSelectedCategory(category)}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
           </div>
 
           <TransitionGroup className={styles.portfolioGrid}>
