@@ -20,6 +20,7 @@
   --shadow-1: rgba(0, 0, 0, 0.19);
   --shadow-2: rgba(48, 46, 77, 0.15);
   --shadow-clr-dark: rgba(0, 0, 0, 0.23);
+  --shadow-white-clr: #fff;
 }
 body.dark {
   --bg-black-900: #333;
@@ -34,6 +35,7 @@ body.dark {
   --shadow-1: rgba(2, 1, 1, 0.824);
   --shadow-2: rgba(163, 158, 235, 0.15);
   --shadow-clr-dark: rgba(9, 9, 9, 0.23);
+  --shadow-white-clr: #0000005e;
 }
 body {
   line-height: 1.5;

@@ -21,7 +21,7 @@ export default function PortfolioCardItems({ data }: PortfolioCardData) {
     <div className={styles.portfolioCard}>
       <div className={styles.wrapper}>
         {data.map((item: PortfolioItem) => (
-          <PortfolioCard key={item.id} styles={styles} item={item} />
+          <PortfolioCard key={item.id} styles={styles} item={item} isForProject={false}  />
         ))}
       </div>
     </div>

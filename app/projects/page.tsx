@@ -1,5 +1,5 @@
 'use client';
-import PortfolioCard from '@/components/PortfolioItems';
+import PortfolioCard from '@/components/PortfolioCard';
 import React, { useState } from 'react';
 import { portfolioItems } from '@/Data';
 import styles from '../../pages/Portfolio/index.module.css';
@@ -67,7 +67,7 @@ export default function Projects() {
                 exitActive: styles.itemExitActive,
               }}
             >
-              <PortfolioCard data={[item]} isForProject={true} />
+              <PortfolioCard item={item} styles={styles} isForProject={true} />
             </CSSTransition>
           ))}
         </TransitionGroup>

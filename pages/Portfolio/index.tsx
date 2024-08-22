@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styles from './index.module.css';
-import PortfolioCard from '@/components/PortfolioItems';
+import PortfolioItems from '@/components/PortfolioItems';
 import { portfolioItems } from '@/Data';
 
 const Portfolio = () => {
@@ -19,7 +19,7 @@ const Portfolio = () => {
           </div>
         </div>
         <div>
-          <PortfolioCard data={data} />
+          <PortfolioItems data={data} />
         </div>
         <Link href='/projects' className={styles.viewAllLink}>
           <div className={`${styles.viewAll}`}>

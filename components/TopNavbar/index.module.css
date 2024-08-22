@@ -7,7 +7,7 @@
   background: var(--bg-black-900);
   padding: 20px;
   z-index: 999;
-  box-shadow: 0 0 3px #fff;
+  box-shadow: 0 0 3px var(--shadow-white-clr);
 }
 .wrapper {
   position: relative;

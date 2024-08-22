@@ -51,7 +51,7 @@ export default function PortfolioCard({ item, styles, isForProject }: PortfolioC
           <p>{item.desc}</p>
         </div>
         <div className={styles.action}>
-          {isForProject ? (
+          {!isForProject ? (
             flipped.includes(item.id) ? (
               <button onClick={() => unFlip(item.id)}>Back</button>
             ) : (
