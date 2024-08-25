@@ -6,7 +6,9 @@ import { useParams } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import '../../../assets/css/globals.css';
 import styles from './page.module.css';
-
+import Image from 'next/image';
+import myImg from '../../../public/images/stock.PNG';
+import { FaGithub } from 'react-icons/fa';
 interface PortfolioItem {
   id: number;
   title: string;
@@ -29,6 +31,7 @@ export default function SingleProject() {
   return (
     <section className={`section ${styles.section}`}>
       <div className={`container ${styles.container}`}>
+        {/* header  */}
         <div className='row min-nav'>
           <div className='home-link'>
             <Link href='/'>Home</Link>
@@ -40,25 +43,47 @@ export default function SingleProject() {
           <span>/</span>
           <div className='text'>Project 1</div>
         </div>
-
-        <div className='info'>
-          <div className='image'></div>
-          <div className='desc'>
-            <h1 className='title'>t</h1>
-            <p className='body'>body</p>
-            <div className='links'>
+        {/* project info  */}
+        <div className={styles.info}>
+          <div className={styles.image}>
+            <Image
+              src={myImg}
+              alt='project image'
+              width={'100%'}
+              height={380}
+              placeholder='blur'
+              style={{ objectFit: 'cover' }}
+              blurDataURL='data:image/png'
+            />
+          </div>
+          <div className={styles.desc}>
+            <h1 className={styles.title}>Lorem ipsum dolor sit.</h1>
+            <p className={styles.body}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+              beatae porro amet, totam ut aliquid recusandae quo suscipit enim
+              mollitia alias delectus pariatur! Nulla molestiae at labore
+              similique unde illum accusantium in ipsa sit id. Commodi sunt quas
+              iusto sit eos ut fugit nobis, harum modi voluptatibus eum
+              similique cum!
+            </p>
+            <div className={styles.links}>
               <a href=''>
-                <span className='icon'></span>
-                <h2>GitHub</h2>
+                <span className={styles.icon}>
+                  <FaGithub />
+                </span>
+                <h4>Code</h4>
               </a>
               <a href=''>
-                <span className='icon'></span>
-                <h2>Site</h2>
+                <span className={styles.icon}>
+                  <FaGithub />
+                </span>
+                <h4>Site</h4>
               </a>
             </div>
           </div>
         </div>
-        <div className='stack'>
+        {/* languages / project stack  */}
+        <div className={styles.stack}>
           <ul>
             <li>
               <h2>1</h2>
