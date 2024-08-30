@@ -5,7 +5,7 @@ import { FaGithub } from 'react-icons/fa';
 interface PortfolioCardProps {
   item: PortfolioItem;
   styles: any;
-  isForProject?: boolean
+  isForProject?: boolean;
 }
 
 interface PortfolioItem {
@@ -17,13 +17,17 @@ interface PortfolioItem {
   github: string;
 }
 
-export default function PortfolioCard({ item, styles, isForProject }: PortfolioCardProps) {
+export default function PortfolioCard({
+  item,
+  styles,
+  isForProject,
+}: PortfolioCardProps) {
   const [flipped, setFlipped] = useState<number[]>([]);
 
   const flip = (id: number) => {
     setFlipped([...flipped, id]);
   };
- 
+
   const unFlip = (id: number) => {
     setFlipped(flipped.filter((item) => item !== id));
   };
@@ -48,7 +52,19 @@ export default function PortfolioCard({ item, styles, isForProject }: PortfolioC
         </div>
         <div className={styles.cardBack}>
           <h2>{item.title}</h2>
-          <p>{item.desc}</p>
+          <p>
+            {item.desc}
+            {isForProject ? (
+              ''
+            ) : (
+              <Link
+                style={{ color: 'blue', fontSize: 13, marginLeft: 1 }}
+                href={`projects/${item.id}`}
+              >
+                View More
+              </Link>
+            )}
+          </p>
         </div>
         <div className={styles.action}>
           {!isForProject ? (

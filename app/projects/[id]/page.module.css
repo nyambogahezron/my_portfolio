@@ -5,7 +5,6 @@
   max-width: 1200px;
   position: relative;
   top: 60px;
-  /* border: 1px solid red; */
 }
 .section .container {
   margin: 0 auto;
@@ -29,7 +28,19 @@
   background: var(--shadow-white-clr);
   border: 1px solid var(--border-clr);
 }
-
+@media screen and (max-width: 1220px) {
+  .info {
+    flex-direction: column-reverse;
+    padding: 10px;
+  }
+  .info .image {
+    flex: 0 0 100%;
+  }
+  .info .image img{
+    width: 100%;
+    object-fit: contain;
+  }
+}
 .info .image img {
   padding: 10px;
   border-radius: 5px;
@@ -71,6 +82,15 @@
 .links a span {
   margin-top: 5px;
 }
-.links a span svg{
-    fill: var(--skin-color);
+.links a span svg {
+  fill: var(--skin-color);
+}
+.stack {
+  margin-top: 10px;
+  padding: 0 15px;
+}
+
+.stack h3 {
+  color: var(--text-black-700);
+  font-size: 15px;
 }

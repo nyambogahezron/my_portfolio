@@ -1,5 +1,4 @@
 'use client';
-import PortfolioCard from '@/components/PortfolioCard';
 import { portfolioItems } from '@/Data';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
@@ -20,13 +19,13 @@ interface PortfolioItem {
 
 export default function SingleProject() {
   const projectId = useParams();
-
-  const [currentItem, setCurrentItem] = useState();
+  const Id = Number(projectId?.id);
+  const [currentItem, setCurrentItem] = useState([]);
+  console.log(currentItem);
 
   useEffect(() => {
-    const item = portfolioItems.filter((item) => item.id === 1);
-
-    // setCurrentItem(item);
+    const item = portfolioItems.filter((item) => item.id === Id);
+    setCurrentItem(item);
   }, [projectId]);
   return (
     <section className={`section ${styles.section}`}>
@@ -49,11 +48,11 @@ export default function SingleProject() {
             <Image
               src={myImg}
               alt='project image'
-              width={'100%'}
               height={380}
               placeholder='blur'
-              style={{ objectFit: 'cover' }}
               blurDataURL='data:image/png'
+              style={{ width: '100%' }}
+              width={'100%'}
             />
           </div>
           <div className={styles.desc}>
@@ -66,6 +65,35 @@ export default function SingleProject() {
               iusto sit eos ut fugit nobis, harum modi voluptatibus eum
               similique cum!
             </p>
+            {/* languages / project stack  */}
+            <div className={styles.stack}>
+              <ol>
+                <li>
+                  <h3>Lorem, ipsum dolor.</h3>
+                </li>
+                <li>
+                  <h3>Lorem, ipsum.</h3>
+                </li>
+                <li>
+                  <h3>Lorem, ipsum.</h3>
+                </li>
+                <li>
+                  <h3>Lorem, ipsum.</h3>
+                </li>
+                <li>
+                  <h3>Lorem, ipsum.</h3>
+                </li>{' '}
+                <li>
+                  <h3>Lorem, ipsum.</h3>
+                </li>{' '}
+                <li>
+                  <h3>Lorem, ipsum.</h3>
+                </li>{' '}
+                <li>
+                  <h3>Lorem, ipsum.</h3>
+                </li>
+              </ol>
+            </div>
             <div className={styles.links}>
               <a href=''>
                 <span className={styles.icon}>
@@ -81,23 +109,6 @@ export default function SingleProject() {
               </a>
             </div>
           </div>
-        </div>
-        {/* languages / project stack  */}
-        <div className={styles.stack}>
-          <ul>
-            <li>
-              <h2>1</h2>
-            </li>
-            <li>
-              <h2>2</h2>
-            </li>
-            <li>
-              <h2>3</h2>
-            </li>
-            <li>
-              <h2>4</h2>
-            </li>
-          </ul>
         </div>
       </div>
     </section>
