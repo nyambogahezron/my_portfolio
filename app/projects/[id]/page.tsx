@@ -6,7 +6,6 @@ import React, { useEffect, useState } from 'react';
 import '../../../assets/css/globals.css';
 import styles from './page.module.css';
 import Image from 'next/image';
-import myImg from '../../../public/images/stock.PNG';
 import { FaGithub } from 'react-icons/fa';
 interface PortfolioItem {
   id: number;
@@ -20,7 +19,7 @@ interface PortfolioItem {
 export default function SingleProject() {
   const projectId = useParams();
   const Id = Number(projectId?.id);
-  const [currentItem, setCurrentItem] = useState([]);
+  const [currentItem, setCurrentItem] = useState<PortfolioItem[]>([]);
   console.log(currentItem);
 
   useEffect(() => {
@@ -45,14 +44,13 @@ export default function SingleProject() {
         {/* project info  */}
         <div className={styles.info}>
           <div className={styles.image}>
-            <Image
-              src={myImg}
+            <Image src={`/social.png`}
               alt='project image'
               height={380}
               placeholder='blur'
               blurDataURL='data:image/png'
               style={{ width: '100%' }}
-              width={'100%'}
+              width={700}
             />
           </div>
           <div className={styles.desc}>
