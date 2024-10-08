@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import '../assets/css/globals.css';
@@ -60,7 +61,7 @@ export default function RootLayout({
             <aside>
               <AsideNavbar />
             </aside>
-            <TopNavbar/>
+            <TopNavbar />
             <main className='main-content'>{children}</main>
           </div>
         </LoadingWrapper>
