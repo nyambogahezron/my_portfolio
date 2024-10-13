@@ -1,4 +1,4 @@
-import { socialLinks } from '@/Data';
+import { socialLinks } from '@data/index';
 import styles from './index.module.css';
 
 const SocialLinks = () => {

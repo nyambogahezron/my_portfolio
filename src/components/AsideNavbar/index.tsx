@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import styles from './index.module.css';
-import { links } from '@/Data';
+import { links } from '@data/index';
 import Link from 'next/link';
 
 const AsideNavbar = () => {

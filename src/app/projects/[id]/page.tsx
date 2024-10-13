@@ -1,9 +1,9 @@
 'use client';
-import { portfolioItems } from '@/Data';
+import { portfolioItems } from '@data/index';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
-import '../../../assets/css/globals.css';
+import '../../../../assets/css/globals.css';
 import styles from './page.module.css';
 import Image from 'next/image';
 import { FaGithub } from 'react-icons/fa';
@@ -44,7 +44,8 @@ export default function SingleProject() {
         {/* project info  */}
         <div className={styles.info}>
           <div className={styles.image}>
-            <Image src={`/social.png`}
+            <Image
+              src={`/social.png`}
               alt='project image'
               height={380}
               placeholder='blur'

@@ -1,11 +1,11 @@
 import { Analytics } from '@vercel/analytics/react';
+
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import '../assets/css/globals.css';
+import '@assets/css/globals.css';
 import LoadingWrapper from '@/components/LoadingWrapper';
 import AsideNavbar from '@/components/AsideNavbar';
 import TopNavbar from '@/components/TopNavbar';
-const inter = Inter({ subsets: ['latin'] });
+import { ReactNode } from 'react';
 
 export const metadata: Metadata = {
   title: 'Hezron Nyamboga - Portfolio',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang='en'>
@@ -55,7 +55,7 @@ export default function RootLayout({
         <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </head>
-      <body className={inter.className}>
+      <body>
         <LoadingWrapper>
           <div>
             <aside>

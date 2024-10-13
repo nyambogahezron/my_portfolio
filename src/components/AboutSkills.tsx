@@ -1,4 +1,4 @@
-import { AboutLanguagesItems } from '@/Data';
+import { AboutLanguagesItems } from '@data/index';
 import styles from '../pages/About/index.module.css';
 
 const AboutSkills = () => {

@@ -1,4 +1,4 @@
-import { languagesListData } from '@/Data';
+import { languagesListData } from '../../../data';
 import styles from './index.module.css';
 
 const LanguagesList: React.FC = () => {

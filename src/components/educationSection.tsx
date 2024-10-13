@@ -1,19 +1,19 @@
-import { educationItem } from '@/Data';
+import { timelineItem } from '@data/index';
 import styles from '../pages/About/index.module.css';
 
-const ExperienceSection = () => {
+const EducationSection = () => {
   return (
-    <div className={styles.experience}>
-      <div className={styles.row}>
-        <div className={styles.timelineBbox}>
+    <div className={styles.education}>
+      <div className='row'>
+        <div className={styles.timelineBox}>
           <div className={styles.timeline}>
-            {educationItem.map((item) => {
+            {timelineItem.map((item) => {
               const { date, title, body, id } = item;
               return (
                 <div key={id} className={styles.timelineItem}>
                   <div className={styles.circleDot}></div>
                   <h3 className={styles.timelineDate}>
-                    <i className={styles.fa}></i> {date}
+                    <i className={styles.fafacalendar}></i> {date}
                   </h3>
                   <h4 className={styles.timelineTitle}>{title}</h4>
                   <p className={styles.timelineText}>{body}</p>
@@ -27,4 +27,4 @@ const ExperienceSection = () => {
   );
 };
 
-export default ExperienceSection;
+export default EducationSection;

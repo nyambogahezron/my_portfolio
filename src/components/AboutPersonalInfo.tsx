@@ -1,5 +1,5 @@
 import styles from '../pages/About/index.module.css';
-import { AboutItems } from '@/Data';
+import { AboutItems } from '@data/index';
 
 const AboutPersonalInfo = () => {
   return (

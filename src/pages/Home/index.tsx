@@ -1,14 +1,12 @@
 import Image from 'next/image';
 import React from 'react';
-import HeroImg from '../../assets/images/hero.png';
-import TopNavbar from '../../components/TopNavbar';
+import HeroImg from '../../../assets/images/hero.png';
 import styles from './index.module.css';
 import LanguagesList from './languagesList';
 
 const Home = () => {
   return (
     <section className={styles.home} id='home'>
-      {/* <TopNavbar /> */}
       <div className='container'>
         <div className='row'>
           <div className={styles.homeInfo}>

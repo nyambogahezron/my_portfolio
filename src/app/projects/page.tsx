@@ -1,9 +1,9 @@
 'use client';
 import PortfolioCard from '@/components/PortfolioCard';
 import React, { useState } from 'react';
-import { portfolioItems } from '@/Data';
-import styles from '../../pages/Portfolio/index.module.css';
-import '../../assets/css/globals.css';
+import { portfolioItems } from '@data/index';
+import styles from '@/pages/Portfolio/index.module.css';
+import '../../../assets/css/globals.css';
 import Link from 'next/link';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
