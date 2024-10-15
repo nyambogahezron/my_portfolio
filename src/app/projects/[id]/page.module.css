@@ -1,11 +1,14 @@
 .section {
   margin: 0 -30px;
+  overflow-y: hidden;
 }
 .container {
   max-width: 1200px;
   position: relative;
   top: 60px;
+  margin: 0 auto;
 }
+
 .section .container {
   margin: 0 auto;
 }
@@ -13,7 +16,9 @@
   width: 100%;
   margin-top: 20px;
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  margin-bottom: 10px;
+  transform: all 0.3s ease;
 }
 .info .image {
   display: flex;
@@ -21,26 +26,25 @@
   flex: 0 0 60%;
   align-items: center;
   width: 100%;
-  height: 400px;
+  height: 300px;
   border-radius: 5px;
   opacity: 0.89;
   transform: all 0.3s ease;
   background: var(--shadow-white-clr);
-  border: 1px solid var(--border-clr);
 }
 @media screen and (max-width: 1220px) {
   .info {
-    flex-direction: column-reverse;
     padding: 10px;
   }
   .info .image {
     flex: 0 0 100%;
   }
-  .info .image img{
+  .info .image img {
     width: 100%;
     object-fit: contain;
   }
 }
+
 .info .image img {
   padding: 10px;
   border-radius: 5px;
@@ -57,12 +61,14 @@
 
 .info .desc .title {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   font-size: 20px;
   margin-bottom: 10px;
   color: var(--text-black-900);
 }
 .info .desc .body {
+  display: flex;
+  justify-content: start;
   line-height: 26px;
   color: var(--text-black-700);
   font-size: 16px;
@@ -71,17 +77,18 @@
   display: flex;
   margin-top: 25px;
   row-gap: 10px;
+  margin-bottom: 30px;
+  align-items: center;
 }
 .links a {
   display: flex;
   gap: 4px;
   align-items: center;
+  justify-content: center;
   color: var(--text-black-700);
   margin-left: 15px;
 }
-.links a span {
-  margin-top: 5px;
-}
+
 .links a span svg {
   fill: var(--skin-color);
 }

@@ -3,21 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { FaGithub } from 'react-icons/fa';
-
-interface PortfolioCardProps {
-  item: PortfolioItem;
-  styles: any;
-  isForProject?: boolean;
-}
-
-interface PortfolioItem {
-  id: number;
-  title: string;
-  desc: string;
-  img: string;
-  site: string;
-  github: string;
-}
+import { PortfolioCardProps } from '../../types';
 
 export default function PortfolioCard({
   item,
@@ -71,15 +57,30 @@ export default function PortfolioCard({
         <div className={styles.action}>
           {!isForProject ? (
             flipped.includes(item.id) ? (
-              <button onClick={() => unFlip(item.id)}>Back</button>
+              <button
+                className='text-sm border border-gray-300 items-center justify-start p-3  w-20 rounded-lg text-bold transition-all hover:bg-white'
+                onClick={() => unFlip(item.id)}
+              >
+                Back
+              </button>
             ) : (
-              <button onClick={() => flip(item.id)}>More</button>
+              <button
+                className='text-sm border border-gray-300 items-center justify-start p-3 w-20 rounded-lg text-bold transition-all hover:bg-white'
+                onClick={() => flip(item.id)}
+              >
+                More
+              </button>
             )
           ) : (
-            <Link href={`projects/${item.id}`}>View More</Link>
+            <Link
+              className='text-sm border border-gray-50 items-center justify-start p-3 rounded-lg text-bold transition-all hover:bg-white'
+              href={`projects/${item.id}`}
+            >
+              View More
+            </Link>
           )}
           <div className={styles.site}>
-            <span>
+            <span className='text-sm items-center justify-start p-3 rounded-lg text-bold transition-all hover:bg-white'>
               <a
                 title='View Source Code'
                 href={item.github}
@@ -89,11 +90,14 @@ export default function PortfolioCard({
                 <FaGithub />
               </a>
             </span>
-            <button className={styles.siteLive} title='View Site'>
-              <a href={item.site} target='_blank' rel='noreferrer'>
+            <a href={item.site} target='_blank' rel='noreferrer'>
+              <button
+                className='text-sm border border-gray-300 items-center justify-start p-3 rounded-lg text-bold transition-all hover:bg-white'
+                title='View Site'
+              >
                 View Site
-              </a>
-            </button>
+              </button>
+            </a>
           </div>
         </div>
       </div>

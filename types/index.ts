@@ -6,6 +6,8 @@ export interface PortfolioItem {
   site: string;
   github: string;
   category: string;
+  stack: any;
+  features: any;
 }
 
 export interface SocialLink {
@@ -43,4 +45,10 @@ export interface LanguageItem {
   id: number;
   name: string;
   Icon: React.ComponentType;
+}
+
+export interface PortfolioCardProps {
+  item: PortfolioItem;
+  styles: any;
+  isForProject?: boolean;
 }

@@ -225,12 +225,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background: #eeedef;
   border-radius: 20px;
   padding: 10px;
   margin: 20px auto;
   width: 100%;
-  gap: 15px;
+  gap: 10px;
 }
 .navButton {
   background-color: var(--bg-black-100);

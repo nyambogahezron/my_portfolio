@@ -273,7 +273,8 @@ p {
   text-underline-offset: 3px;
 }
 
-.min-nav span , .min-nav .text{
+.min-nav span,
+.min-nav .text {
   color: var(--text-color-1);
 }
 .min-nav span {

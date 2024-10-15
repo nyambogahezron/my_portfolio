@@ -6,19 +6,19 @@ import React, { useEffect, useState } from 'react';
 import '@assets/css/globals.css';
 import styles from './page.module.css';
 import Image from 'next/image';
-import { FaGithub } from 'react-icons/fa';
+import { FaAngleRight, FaGithub } from 'react-icons/fa';
 import { PortfolioItem } from '../../../../types';
 
 export default function SingleProject() {
   const projectId = useParams();
   const Id = Number(projectId?.id);
   const [currentItem, setCurrentItem] = useState<PortfolioItem[]>([]);
-  console.log(currentItem);
-
+  // console.log(currentItem);
   useEffect(() => {
     const item = portfolioItems.filter((item) => item.id === Id);
     setCurrentItem(item);
   }, [projectId]);
+
   return (
     <section className={`section ${styles.section}`}>
       <div className={`container ${styles.container}`}>
@@ -32,68 +32,66 @@ export default function SingleProject() {
             <Link href='/projects'>Projects</Link>
           </div>
           <span>/</span>
-          <div className='text'>Project 1</div>
+          <div className='text'>{currentItem[0]?.title}</div>
         </div>
         {/* project info  */}
         <div className={styles.info}>
+          <div className={styles.desc}>
+            <h1 className={styles.title}>{currentItem[0]?.title}</h1>
+            <p className={styles.body}>{currentItem[0]?.desc}</p>
+          </div>
           <div className={styles.image}>
             <Image
-              src={`/social.png`}
+              src={currentItem[0]?.img}
               alt='project image'
-              height={380}
+              height={350}
               placeholder='blur'
               blurDataURL='data:image/png'
-              style={{ width: '100%' }}
+              style={{ width: '100%', height: 600 }}
               width={700}
             />
           </div>
           <div className={styles.desc}>
-            <h1 className={styles.title}>Lorem ipsum dolor sit.</h1>
-            <p className={styles.body}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-              beatae porro amet, totam ut aliquid recusandae quo suscipit enim
-              mollitia alias delectus pariatur! Nulla molestiae at labore
-              similique unde illum accusantium in ipsa sit id. Commodi sunt quas
-              iusto sit eos ut fugit nobis, harum modi voluptatibus eum
-              similique cum!
-            </p>
-            {/* languages / project stack  */}
-            <div className={styles.stack}>
-              <ol>
-                <li>
-                  <h3>Lorem, ipsum dolor.</h3>
-                </li>
-                <li>
-                  <h3>Lorem, ipsum.</h3>
-                </li>
-                <li>
-                  <h3>Lorem, ipsum.</h3>
-                </li>
-                <li>
-                  <h3>Lorem, ipsum.</h3>
-                </li>
-                <li>
-                  <h3>Lorem, ipsum.</h3>
-                </li>{' '}
-                <li>
-                  <h3>Lorem, ipsum.</h3>
-                </li>{' '}
-                <li>
-                  <h3>Lorem, ipsum.</h3>
-                </li>{' '}
-                <li>
-                  <h3>Lorem, ipsum.</h3>
-                </li>
-              </ol>
+            <div className='mt-4'>
+              <h1 className={styles.title}>Stack</h1>
+              <div className={styles.stack}>
+                <ol>
+                  {currentItem[0]?.stack &&
+                    Object.values(currentItem[0].stack).map(
+                      (stack: any, index) => (
+                        <li key={index} className='flex flex-row gp-2'>
+                          <FaAngleRight />
+                          <h3>{stack}</h3>
+                        </li>
+                      )
+                    )}
+                </ol>
+              </div>
+            </div>
+            <div className='mt-4'>
+              <h1 className={styles.title}>Features</h1>
+              <div className={styles.stack}>
+                <ol>
+                  {currentItem[0]?.features &&
+                    Object.values(currentItem[0].features).map(
+                      (feature: any, index) => (
+                        <li key={index} className='flex flex-row gp-2 mb-2'>
+                          <FaAngleRight />
+                          <h3>{feature}</h3>
+                        </li>
+                      )
+                    )}
+                </ol>
+              </div>
             </div>
             <div className={styles.links}>
-              <a href=''>
+              <a href={currentItem[0]?.github}>
                 <span className={styles.icon}>
                   <FaGithub />
                 </span>
                 <h4>Code</h4>
               </a>
-              <a href=''>
+              <a href={currentItem[0]?.site}>
                 <span className={styles.icon}>
                   <FaGithub />
                 </span>
