@@ -14,63 +14,19 @@ import {
   FaDatabase,
   FaNodeJs,
 } from 'react-icons/fa';
+import {
+  AboutItem,
+  AboutLanguageItem,
+  EducationItem,
+  LanguageItem,
+  Link,
+  PortfolioItem,
+  SocialLink,
+  TimelineItem,
+} from '../types';
 
-interface SocialLink {
-  platform: string;
-  href: string;
-  Icon: React.ComponentType;
-}
 
-interface AboutItem {
-  id: number;
-  name: string;
-  item: string;
-}
-
-interface AboutLanguageItem {
-  id: number;
-  name: string;
-  percent: string;
-}
-
-interface TimelineItem {
-  id: number;
-  date: string;
-  title: string;
-  body: string;
-}
-
-interface EducationItem {
-  id: number;
-  date: string;
-  title: string;
-  body: string;
-}
-
-interface Link {
-  name: string;
-  label: string;
-  link?: string;
-}
-
-interface LanguageItem {
-  id: number;
-  name: string;
-  Icon: React.ComponentType;
-}
-
-interface PortfolioItem {
-  id: number;
-  title: string;
-  github: string;
-  site: string;
-  img: string;
-  desc: string;
-  category: string;
-}
-
-// Convert arrays to TypeScript
-const socialLinks: SocialLink[] = [
+export const socialLinks: SocialLink[] = [
   { platform: 'facebook', href: '#', Icon: FaFacebook },
   { platform: 'twitter', href: '#', Icon: FaTwitter },
   { platform: 'linkedin', href: '#', Icon: FaLinkedin },
@@ -78,7 +34,7 @@ const socialLinks: SocialLink[] = [
   { platform: 'github', href: '#', Icon: FaGithub },
 ];
 
-const AboutItems: AboutItem[] = [
+export const AboutItems: AboutItem[] = [
   { id: 1, name: 'Email', item: 'hezronnyamboga6@gmail.com' },
   { id: 2, name: 'Degree', item: 'CS' },
   { id: 3, name: 'Certifications', item: 'CCNA' },
@@ -86,7 +42,7 @@ const AboutItems: AboutItem[] = [
   { id: 5, name: 'Freelance', item: 'Available' },
 ];
 
-const AboutLanguagesItems: AboutLanguageItem[] = [
+export const AboutLanguagesItems: AboutLanguageItem[] = [
   { id: 1, name: 'CSS', percent: '90%' },
   { id: 2, name: 'JS', percent: '87%' },
   { id: 3, name: 'NODE JS', percent: '90%' },
@@ -94,7 +50,7 @@ const AboutLanguagesItems: AboutLanguageItem[] = [
   { id: 5, name: 'HTML', percent: '96%' },
 ];
 
-const languagesListData: LanguageItem[] = [
+export const languagesListData: LanguageItem[] = [
   {
     id: 1,
     name: 'HTML',
@@ -142,7 +98,7 @@ const languagesListData: LanguageItem[] = [
   },
 ];
 
-const timelineItem: TimelineItem[] = [
+export const timelineItem: TimelineItem[] = [
   {
     id: 1,
     date: '2023 - 2024',
@@ -169,7 +125,7 @@ const timelineItem: TimelineItem[] = [
   },
 ];
 
-const educationItem: EducationItem[] = [
+export const educationItem: EducationItem[] = [
   {
     id: 1,
     date: '2023 - 2024',
@@ -197,14 +153,14 @@ const educationItem: EducationItem[] = [
   },
 ];
 
-const links: Link[] = [
+export const links: Link[] = [
   { name: 'home', label: 'Home', link: '/' },
   { name: 'blogs', label: 'Blog', link: '/blogs' },
   { name: 'portfolio', label: 'Portfolio', link: '/projects' },
   { name: 'contact', label: 'Contact', link: '/#contact' },
 ];
 
-const portfolioItems: PortfolioItem[] = [
+export const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
     title: 'Delightful Restaurant',
@@ -246,56 +202,4 @@ const portfolioItems: PortfolioItem[] = [
                     foster meaningful connections and creative expression.`,
     category: 'Web',
   },
-  {
-    id: 4,
-    title: 'Delightful Restaurant',
-    github: 'https://github.com/nyambogahezron',
-    site: 'https://delightful-restaurant.vercel.app/',
-    img: '/images/res.PNG',
-    desc: `I spearheaded a dynamic restaurant project that seamlessly
-          blends technology with the culinary world to enhance the
-          dining experience. This innovative venture focuses on
-          digital menu management, online ordering, table reservation,
-          revolutionizing the way patrons interact with our
-          establishment.`,
-    category: 'Web Apps',
-  },
-  {
-    id: 5,
-    title: 'Stock Market',
-    github: 'https://github.com/nyambogahezron',
-    site: 'https://stock-market-app-seven.vercel.app/',
-    img: '/images/stock.PNG',
-    desc: `This is a dynamic e-commerce application, a digital
-                    marketplace designed to redefine the online shopping
-                    experience. Seamlessly merging functionality with
-                    user-friendly design, this platform offers a comprehensive
-                    range of products and services, catering to the diverse
-                    needs of our global clientele`,
-    category: 'Web Apps',
-  },
-  {
-    id: 6,
-    title: 'Social Connect',
-    github: 'https://github.com/nyambogahezron',
-    site: 'https://social-theme.vercel.app/',
-    img: '/images/social.PNG',
-    desc: `This revolutionary social media application, a dynamic
-                    platform designed to connect, engage, and inspire users
-                    around the world. Our application redefines the social
-                    networking experience, offering a range of features that
-                    foster meaningful connections and creative expression.`,
-    category: 'APIs',
-  },
 ];
-
-export {
-  AboutItems,
-  AboutLanguagesItems,
-  timelineItem,
-  educationItem,
-  links,
-  portfolioItems,
-  socialLinks,
-  languagesListData,
-};
