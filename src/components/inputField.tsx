@@ -1,4 +1,4 @@
-import styles from '../pages/Contact/index.module.css';
+import styles from '@/components/pages/Contact/index.module.css';
 import React, { ChangeEvent } from 'react';
 
 interface InputFieldProps {

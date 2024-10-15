@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import HeroImg from '../../../assets/images/hero.png';
+import HeroImg from '@assets/images/hero.png';
 import styles from './index.module.css';
 import LanguagesList from './languagesList';
 

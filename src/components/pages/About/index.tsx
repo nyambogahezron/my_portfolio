@@ -1,5 +1,5 @@
-import AboutTabs from '../../components/AboutTabs';
-import AboutPersonalInfo from '../../components/AboutPersonalInfo';
+import AboutTabs from '../../AboutTabs';
+import AboutPersonalInfo from '../../AboutPersonalInfo';
 import styles from './index.module.css';
 
 const About = () => {

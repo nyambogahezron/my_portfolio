@@ -1,5 +1,5 @@
 import { timelineItem } from '@data/index';
-import styles from '../pages/About/index.module.css';
+import styles from '@/components/pages/About/index.module.css';
 
 const EducationSection = () => {
   return (

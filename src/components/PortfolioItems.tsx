@@ -1,5 +1,5 @@
 import { PortfolioItem } from '../../types';
-import styles from '../pages/Portfolio/index.module.css';
+import styles from '@/components/pages/Portfolio/index.module.css';
 import PortfolioCard from './PortfolioCard';
 
 interface PortfolioCardData {

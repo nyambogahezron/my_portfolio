@@ -1,6 +1,6 @@
-import Home from '@/pages/Home';
-import Portfolio from '@/pages/Portfolio';
-import Contact from '@/pages/Contact';
+import Home from '@/components/pages/Home';
+import Portfolio from '@/components/pages/Portfolio';
+import Contact from '@/components/pages/Contact';
 
 const HomePage = () => {
   return (

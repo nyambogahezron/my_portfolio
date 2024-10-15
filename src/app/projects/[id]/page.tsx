@@ -3,18 +3,11 @@ import { portfolioItems } from '@data/index';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
-import '../../../../assets/css/globals.css';
+import '@assets/css/globals.css';
 import styles from './page.module.css';
 import Image from 'next/image';
 import { FaGithub } from 'react-icons/fa';
-interface PortfolioItem {
-  id: number;
-  title: string;
-  desc: string;
-  img: string;
-  site: string;
-  github: string;
-}
+import { PortfolioItem } from '../../../../types';
 
 export default function SingleProject() {
   const projectId = useParams();

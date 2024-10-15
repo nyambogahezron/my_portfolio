@@ -1,6 +1,6 @@
-import SocialLinks from '../../components/SocialLinks';
+import SocialLinks from '@/components/SocialLinks';
 import { FaEnvelope, FaGlobe, FaPhone } from 'react-icons/fa';
-import ContactForm from '../../components/ContactForm';
+import ContactForm from '@/components/ContactForm';
 import styles from './index.module.css';
 
 const Contact = () => {

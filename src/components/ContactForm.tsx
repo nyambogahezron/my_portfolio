@@ -3,7 +3,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import InputField from './inputField';
 import { useState, FormEvent, ChangeEvent } from 'react';
-import styles from '../pages/Contact/index.module.css';
+import styles from '@/components/pages/Contact/index.module.css';
 
 interface FormData {
   name: string;

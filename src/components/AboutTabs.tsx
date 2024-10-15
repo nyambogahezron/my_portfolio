@@ -1,6 +1,6 @@
 import EducationSection from './educationSection';
 import ExperienceSection from './experienceSection';
-import styles from '../pages/About/index.module.css';
+import styles from '@/components/pages/About/index.module.css';
 
 const AboutTabs = () => {
   return (
