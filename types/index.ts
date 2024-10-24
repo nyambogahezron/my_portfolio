@@ -1,13 +1,16 @@
+
+type category = 'Web' | 'Mobile' | 'Desktop' | 'Other';
 export interface PortfolioItem {
   id: number;
   title: string;
-  desc: string;
-  img: string;
-  site: string;
   github: string;
-  category: string;
-  stack: any;
-  features: any;
+  site: string;
+  img: string;
+  desc: string;
+  category: category;
+  stack?: any;
+  features?: any;
+  download?: any;
 }
 
 export interface SocialLink {

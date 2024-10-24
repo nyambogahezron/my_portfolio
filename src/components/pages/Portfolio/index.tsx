@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styles from './index.module.css';
 import PortfolioItems from '@/components/PortfolioItems';
-import { portfolioItems } from '../../../../data';
+import { portfolioItems } from '../../../../data/projects';
 
 const Portfolio = () => {
   const data = portfolioItems.slice(0, 3);

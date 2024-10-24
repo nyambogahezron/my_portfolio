@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { PortfolioCardProps } from '../../types';
+import '@assets/css/globals.css';
 
 export default function PortfolioCard({
   item,
@@ -46,7 +47,7 @@ export default function PortfolioCard({
               ''
             ) : (
               <Link
-                style={{ color: 'blue', fontSize: 13, marginLeft: 1 }}
+                style={{ color: 'blue', fontSize: 12, marginLeft: 1 }}
                 href={`projects/${item.id}`}
               >
                 View More
@@ -58,14 +59,14 @@ export default function PortfolioCard({
           {!isForProject ? (
             flipped.includes(item.id) ? (
               <button
-                className='text-sm border border-gray-300 items-center justify-start p-3  w-20 rounded-lg text-bold transition-all hover:bg-white'
+                className='actionBtn text-sm border border-gray-300 items-center  justify-start p-3  w-20 rounded-lg text-bold transition-all hover:bg-white'
                 onClick={() => unFlip(item.id)}
               >
                 Back
               </button>
             ) : (
               <button
-                className='text-sm border border-gray-300 items-center justify-start p-3 w-20 rounded-lg text-bold transition-all hover:bg-white'
+                className='actionBtn text-sm border border-gray-300 items-center justify-start p-3 w-20 rounded-lg text-bold transition-all hover:bg-white'
                 onClick={() => flip(item.id)}
               >
                 More
@@ -73,7 +74,7 @@ export default function PortfolioCard({
             )
           ) : (
             <Link
-              className='text-sm border border-gray-50 items-center justify-start p-3 rounded-lg text-bold transition-all hover:bg-white'
+              className='actionBtn text-sm items-center justify-start p-3 rounded-lg text-bold transition-all hover:bg-white'
               href={`projects/${item.id}`}
             >
               View More
@@ -82,6 +83,7 @@ export default function PortfolioCard({
           <div className={styles.site}>
             <span className='text-sm items-center justify-start p-3 rounded-lg text-bold transition-all hover:bg-white'>
               <a
+                className='fa-github'
                 title='View Source Code'
                 href={item.github}
                 target='_blank'
@@ -90,9 +92,14 @@ export default function PortfolioCard({
                 <FaGithub />
               </a>
             </span>
-            <a href={item.site} target='_blank' rel='noreferrer'>
+            <a
+              href={item.site}
+              target='_blank'
+              rel='noreferrer'
+              className='text-black hover:text-white'
+            >
               <button
-                className='text-sm border border-gray-300 items-center justify-start p-3 rounded-lg text-bold transition-all hover:bg-white'
+                className='actionBtn text-sm border border-gray-300 items-center justify-start p-3 rounded-lg text-bold transition-all hover:text-white hover:bg-white'
                 title='View Site'
               >
                 View Site

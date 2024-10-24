@@ -17,10 +17,12 @@
   --text-color-1: #000;
   --color-red: #ec1839;
   --border-clr: #ccc;
+  --border-clr-2: #e1e1e1;
   --shadow-1: rgba(0, 0, 0, 0.19);
   --shadow-2: rgba(48, 46, 77, 0.15);
   --shadow-clr-dark: rgba(0, 0, 0, 0.23);
   --shadow-white-clr: #fff;
+  --black-default:#000;
 }
 body.dark {
   --bg-black-900: #333;
@@ -32,10 +34,12 @@ body.dark {
   --text-white: #000;
   --text-color-1: #fff;
   --border-clr: #1a1818;
+  --border-clr-2: #2d2c2c;
   --shadow-1: rgba(2, 1, 1, 0.824);
   --shadow-2: rgba(163, 158, 235, 0.15);
   --shadow-clr-dark: rgba(9, 9, 9, 0.23);
   --shadow-white-clr: #0000005e;
+  --black-default:#fff;
 }
 body {
   line-height: 1.5;
@@ -154,6 +158,14 @@ html {
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
 
+.actionBtn {
+  color: var(--text-color-1) !important;
+  background: var(--border-clr-2) !important;
+}
+.actionBtn:hover {
+  color: var(--black-default) !important;
+  /* background: transparent !important; */
+}
 h3,
 p {
   padding-left: 13px;
@@ -281,4 +293,17 @@ p {
   margin-top: -1px;
   font-size: 20px;
   font-weight: bold;
+}
+
+.projectCard {
+  background: var(--bg-black-900);
+  border: 1px solid var(--border-clr);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 16px;
+  transition: all 0.3s ease;
+}
+.projectCardIcon{
+  font-size: 20px;
+  color: var(--skin-color);
 }

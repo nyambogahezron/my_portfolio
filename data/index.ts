@@ -20,7 +20,6 @@ import {
   EducationItem,
   LanguageItem,
   Link,
-  PortfolioItem,
   SocialLink,
   TimelineItem,
 } from '../types';
@@ -154,99 +153,42 @@ export const educationItem: EducationItem[] = [
 
 export const links: Link[] = [
   { name: 'home', label: 'Home', link: '/' },
-  { name: 'blogs', label: 'Blog', link: '/blogs' },
+  { name: 'about me', label: 'About Me', link: '/about' },
   { name: 'portfolio', label: 'Portfolio', link: '/projects' },
   { name: 'contact', label: 'Contact', link: '/#contact' },
+  // { name: 'blogs', label: 'Blog', link: '/blogs' },
 ];
 
-export const portfolioItems: PortfolioItem[] = [
-  {
-    id: 1,
-    title: 'Delightful Restaurant',
-    github: 'https://github.com/nyambogahezron',
-    site: 'https://delightful-restaurant.vercel.app/',
-    img: '/images/res.png',
-    desc: `I spearheaded a dynamic restaurant project that seamlessly
-          blends technology with the culinary world to enhance the
-          dining experience. This innovative venture focuses on
-          digital menu management, online ordering, table reservation,
-          revolutionizing the way patrons interact with our
-          establishment.`,
-    category: 'Web',
-    stack: {
-      1: 'React',
-      2: 'Node',
-      3: 'Express',
-      4: 'MongoDB',
-    },
-    features: {
-      1: 'A wide range of products with real-time updates and availability.',
-      2: 'Intuitive design for easy navigation and a seamless shopping experience.',
-      3: 'Advanced search functionality with filters for category, price, and product type.',
-      4: 'Detailed product pages that include descriptions, images, and customer reviews.',
-      5: 'Add products to the cart with the option to adjust quantities before checkout.',
-      6: 'Multiple payment options, including PayPal, ensuring a safe transaction process.',
-      7: 'Real-time updates on order status, from processing to delivery.',
-      8: 'Optimized for both desktop and mobile devices, providing an excellent experience on any screen size.',
-    },
-  },
-  {
-    id: 2,
-    title: 'Stock Market',
-    github: 'https://github.com/nyambogahezron',
-    site: 'https://stock-market-app-seven.vercel.app/',
-    img: '/images/stock.png',
-    desc: `This is a dynamic e-commerce application, a digital
-                    marketplace designed to redefine the online shopping
-                    experience. Seamlessly merging functionality with
-                    user-friendly design, this platform offers a comprehensive
-                    range of products and services, catering to the diverse
-                    needs of our global clientele`,
-    category: 'Web',
-    stack: {
-      1: 'React',
-      2: 'Node',
-      3: 'Express',
-      4: 'MongoDB',
-    },
-    features: {
-      1: 'A wide range of products with real-time updates and availability.',
-      2: 'Intuitive design for easy navigation and a seamless shopping experience.',
-      3: 'Advanced search functionality with filters for category, price, and product type.',
-      4: 'Detailed product pages that include descriptions, images, and customer reviews.',
-      5: 'Add products to the cart with the option to adjust quantities before checkout.',
-      6: 'Multiple payment options, including PayPal, ensuring a safe transaction process.',
-      7: 'Real-time updates on order status, from processing to delivery.',
-      8: 'Optimized for both desktop and mobile devices, providing an excellent experience on any screen size.',
-    },
-  },
-  {
-    id: 3,
-    title: 'Social Connect',
-    github: 'https://github.com/nyambogahezron',
-    site: 'https://social-theme.vercel.app/',
-    img: '/images/social.png',
-    desc: `This revolutionary social media application, a dynamic
-                    platform designed to connect, engage, and inspire users
-                    around the world. Our application redefines the social
-                    networking experience, offering a range of features that
-                    foster meaningful connections and creative expression.`,
-    category: 'Web',
-    stack: {
-      1: 'React',
-      2: 'Node',
-      3: 'Express',
-      4: 'MongoDB',
-    },
-    features: {
-      1: 'A wide range of products with real-time updates and availability.',
-      2: 'Intuitive design for easy navigation and a seamless shopping experience.',
-      3: 'Advanced search functionality with filters for category, price, and product type.',
-      4: 'Detailed product pages that include descriptions, images, and customer reviews.',
-      5: 'Add products to the cart with the option to adjust quantities before checkout.',
-      6: 'Multiple payment options, including PayPal, ensuring a safe transaction process.',
-      7: 'Real-time updates on order status, from processing to delivery.',
-      8: 'Optimized for both desktop and mobile devices, providing an excellent experience on any screen size.',
-    },
-  },
-];
+// export const portfolioItems: PortfolioItem[] = [
+//   {
+//     id: 1,
+//     title: 'Delightful Restaurant',
+//     github: 'https://github.com/nyambogahezron',
+//     site: 'https://delightful-restaurant.vercel.app/',
+//     img: '/images/res.png',
+//     desc: `I spearheaded a dynamic restaurant project that seamlessly
+//           blends technology with the culinary world to enhance the
+//           dining experience. This innovative venture focuses on
+//           digital menu management, online ordering, table reservation,
+//           revolutionizing the way patrons interact with our
+//           establishment.`,
+//     category: 'Web',
+//     stack: {
+//       1: 'React',
+//       2: 'Node',
+//       3: 'Express',
+//       4: 'MongoDB',
+//     },
+//     features: {
+//       1: 'A wide range of products with real-time updates and availability.',
+//       2: 'Intuitive design for easy navigation and a seamless shopping experience.',
+//       3: 'Advanced search functionality with filters for category, price, and product type.',
+//       4: 'Detailed product pages that include descriptions, images, and customer reviews.',
+//       5: 'Add products to the cart with the option to adjust quantities before checkout.',
+//       6: 'Multiple payment options, including PayPal, ensuring a safe transaction process.',
+//       7: 'Real-time updates on order status, from processing to delivery.',
+//       8: 'Optimized for both desktop and mobile devices, providing an excellent experience on any screen size.',
+//     },
+//   },
+ 
+// ];

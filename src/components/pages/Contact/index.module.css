@@ -65,6 +65,7 @@
 }
 .alert {
   display: flex;
+  gap: 10px;
   position: relative;
   margin: 15px;
   align-items: center;

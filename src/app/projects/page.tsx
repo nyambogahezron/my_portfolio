@@ -1,7 +1,7 @@
 'use client';
 import PortfolioCard from '@/components/PortfolioCard';
 import React, { useState } from 'react';
-import { portfolioItems } from '@data/index';
+import { portfolioItems } from '@data/projects';
 import styles from '@/components/pages/Portfolio/index.module.css';
 import '@assets/css/globals.css';
 import Link from 'next/link';

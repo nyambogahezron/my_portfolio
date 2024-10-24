@@ -166,15 +166,18 @@
   color: var(--text-color-1);
   transition: 0.2s all ease;
 }
+.card .action button {
+  color: var(---text-color-1);
+}
+
 .card button:hover {
   color: var(--text-white);
-  background: var(--text-black-700);
 }
 .card .action .siteLive {
   font-family: 700;
   padding: 10px 20px;
 }
-.card .fa-brands.fa-github {
+.card .fa-github {
   color: var(--skin-color);
 }
 .card .action .siteLive::before {
@@ -209,6 +212,7 @@
 }
 .viewAllLink {
   color: #fff;
+ 
   font-size: 16px;
   font-weight: 800;
   margin-top: 30px;

@@ -46,7 +46,7 @@ const ContactForm = () => {
         throw new Error(`An error has ocurred: ${response.status}`);
       }
 
-      const responseData = await response.json();
+      await response.json();
       // console.log(responseData)
 
       toast.success('Message sent successfully');
@@ -69,13 +69,7 @@ const ContactForm = () => {
       <h4
         className={styles.contactSubTitle}
       >{`I'M VERY RESPONSIVE TO MESSAGES`}</h4>
-      {isLoading && (
-        <div className={styles.alert}>
-          <div className={`${styles.formInfo} ${styles.showAlert}`} />
-          <span>Loading...</span>
-          <span className={`${styles.loader} ${styles.showLoader}`}></span>
-        </div>
-      )}
+     
       <div className={styles.form}>
         <form className={styles.sendMail} onSubmit={handleSubmit}>
           <div className={styles.contactForm}>
@@ -132,10 +126,10 @@ const ContactForm = () => {
                 </div>
               </div>
             </div>
-            <div className='row'>
+            <div className='row justify-center'>
               <div className={`${styles.formItem} ${styles.col12}`}>
-                <button className={`btn ${styles.btn}  }`} type='submit'>
-                  Send Message
+                <button disabled={isLoading} className={`${isLoading? 'hover:cursor-not-allowed hover:animate-none' : ''}  btn ${styles.btn}  }`} type='submit'>
+                  {isLoading ? 'Sending...' : 'Send Message'}
                 </button>
               </div>
             </div>
